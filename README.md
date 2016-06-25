@@ -19,11 +19,19 @@ Introduction to Python - Syntax, working with Shell commands, Files, Text Proces
     * Integer input, Floating point input, String input
 * [Executing external commands](./Executing_external_commands.md)
     * Calling Shell commands, Calling Shell commands with expansion, Getting command output and redirections
+* [Control Structures](./Control_structures.md)
+    * Condition checking, if, for, while, continue and break
 
 <br>
 # <a name="ebook"></a>ebook
 
 * Once all chapters are done...
+
+<br>
+# <a name="credits"></a>Credits
+
+* [Devs and Hackers](http://slack.devup.in/) - helpful slack group
+* [Weekly Coders, Hackers & All Tech related thread](https://www.reddit.com/r/india/search?q=Weekly+Coders%2C+Hackers+%26+All+Tech+related+thread+author%3Aavinassh&amp;restrict_sr=on&amp;sort=new&amp;t=all) - for suggestions and critique
 
 <br>
 # <a name="license"></a>License
