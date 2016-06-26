@@ -21,6 +21,8 @@ Introduction to Python - Syntax, working with Shell commands, Files, Text Proces
     * Calling Shell commands, Calling Shell commands with expansion, Getting command output and redirections
 * [Control Structures](./Control_structures.md)
     * Condition checking, if, for, while, continue and break
+* [Lists](./Lists.md)
+    * Assigning List variables, Slicing and Modifying Lists, Copying Lists, List Methods and Miscellaneous, Looping, List Comprehension
 
 <br>
 # <a name="ebook"></a>ebook
