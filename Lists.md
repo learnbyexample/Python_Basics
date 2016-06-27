@@ -324,6 +324,35 @@ False
 5
 ```
 
+* summing numeric lists
+
+```
+>>> a
+[321, 5.3, 2, 1, 1, 0]
+>>> sum(a)
+330.3
+```
+
+* `all` and `any`
+
+```
+>>> conditions = [True, False, True]
+>>> all(conditions)
+False
+>>> any(conditions)
+True
+
+>>> conditions[1] = True
+>>> all(conditions)
+True
+
+>>> a = [321, 5.3, 2, 1, 1, 0]
+>>> all(a)
+False
+>>> any(a)
+True
+```
+
 * comparing lists
 
 ```
@@ -339,6 +368,43 @@ False
 True
 ```
 
+* building a list of lists can be quite useful
+
+```python
+#!/usr/bin/python3
+
+import random
+
+north = ['aloo tikki', 'baati', 'khichdi', 'makki roti', 'poha']
+south = ['appam', 'bisibele bath', 'dosa', 'koottu', 'sevai']
+west  = ['dhokla', 'khakhra', 'modak', 'shiro', 'vada pav']
+east  = ['hando guri', 'litti', 'momo', 'rosgulla', 'shondesh']
+zones = ['North', 'South', 'West', 'East']
+
+choose_dish = [north, south, west, east]
+rand_zone = random.randrange(4)
+rand_dish = random.randrange(5)
+
+zone = zones[rand_zone]
+dish = choose_dish[rand_zone][rand_dish]
+print("Would you like to have '{}' speciality '{}' today?".format(zone, dish))
+```
+
+* Here we take advantage of the way list variables are referenced
+* A change in any of the four lists `north, south, east and west` will reflect accordingly in `choose_dish` too
+
+```
+$ ./list_of_lists.py 
+Would you like to have 'West' speciality 'vada pav' today?
+$ ./list_of_lists.py 
+Would you like to have 'South' speciality 'appam' today?
+$ ./list_of_lists.py 
+Would you like to have 'South' speciality 'dosa' today?
+$ ./list_of_lists.py 
+Would you like to have 'East' speciality 'momo' today?
+```
+
+
 **Further Reading**
 
 * [Python docs - more on lists](https://docs.python.org/3/tutorial/datastructures.html#more-on-lists)
@@ -347,6 +413,7 @@ True
 * [Python docs - dir](https://docs.python.org/3/library/functions.html#dir)
 * [Python docs - sort](https://docs.python.org/3/library/stdtypes.html#list.sort)
 * [Python docs - various techniques for sorting data](https://docs.python.org/3/howto/sorting.html#sortinghowto)
+* [Python docs - all, any](https://docs.python.org/3/library/functions.html#all)
 
 <br>
 ### <a name="looping"></a>Looping
@@ -475,6 +542,7 @@ For more examples, including nested loops, check these
 
 * [Python docs - list comprehensions](https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions)
 * [Python List Comprehensions: Explained Visually](http://treyhunner.com/2015/12/python-list-comprehensions-now-in-color/)
+* [are list comprehensions and functional functions faster than for loops](http://stackoverflow.com/questions/22108488/are-list-comprehensions-and-functional-functions-faster-than-for-loops)
 * [Python docs - perf_counter](https://docs.python.org/3/library/time.html#time.perf_counter)
     * [understanding perf_counter and process_time](http://stackoverflow.com/questions/25785243/understanding-time-perf-counter-and-time-process-time)
 * [Python docs - timeit](https://docs.python.org/3/library/timeit.html)
