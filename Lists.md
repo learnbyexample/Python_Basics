@@ -12,7 +12,7 @@
 
 * Simple lists and retrieving list elements
 
-```
+```python
 >>> vowels = ['a', 'e', 'i', 'o', 'u']
 >>> vowels
 ['a', 'e', 'i', 'o', 'u']
@@ -40,7 +40,7 @@ IndexError: list index out of range
 
 * Mix of data types and multi-dimensional lists
 
-```
+```python
 >>> student = ['learnbyexample', 2016, 'Linux, Vim, Python']
 >>> print(student)
 ['learnbyexample', 2016, 'Linux, Vim, Python']
@@ -60,7 +60,7 @@ IndexError: list index out of range
 * Like the `range()` function, list index has `start:stop:step` format, `stop` value being non-inclusive
 * The indexing format can be used to extract from list variable or modify itself
 
-```
+```python
 >>> books = ['Harry Potter', 'Sherlock Holmes', 'To Kill a Mocking Bird']
 >>> books[2] = "Ender's Game"
 >>> print(books)
@@ -102,7 +102,7 @@ IndexError: list index out of range
 * the [id()](https://docs.python.org/3/library/functions.html#id) function returns the "identity" of an object
 * For variables referring to immutable types like integer and strings, this distinction usually doesn't cause confusion in their usage
 
-```
+```python
 >>> a = 5
 >>> id(a)
 10105952
@@ -125,7 +125,7 @@ IndexError: list index out of range
 * But for variables referring to mutable types like lists, it is important to how variables are copied and passed to functions
 * When an element of list variable is modified, it does so by changing the value (mutation) of object at that index
 
-```
+```python
 >>> a = [1, 2, 5, 4.3]
 >>> a
 [1, 2, 5, 4.3]
@@ -145,7 +145,7 @@ IndexError: list index out of range
 
 * avoid copying lists using indexing format, it works for 1D lists but not for higher dimensions
 
-```
+```python
 >>> prime = [2, 3, 5, 7, 11]
 >>> b = prime[:]
 >>> id(prime)
@@ -175,7 +175,7 @@ IndexError: list index out of range
 
 * use the [copy](https://docs.python.org/3/library/copy.html#module-copy) module instead
 
-```
+```python
 >>> import copy
 >>> list_2D = [[1, 3, 2, 10], [1.2, -0.2, 0, 2]]
 >>> c = copy.deepcopy(list_2D)
@@ -191,7 +191,7 @@ IndexError: list index out of range
 
 * adding elements to list
 
-```
+```python
 >>> books = []
 >>> books
 []
@@ -218,7 +218,7 @@ IndexError: list index out of range
 
 * deleting elements from a list - based on index and value
 
-```
+```python
 >>> prime = [2, 3, 5, 7, 11]
 >>> prime.pop()
 11
@@ -250,7 +250,7 @@ ValueError: list.remove(x): x not in list
 
 * inserting elements at a particular index
 
-```
+```python
 >>> books = ['Harry Potter', 'Sherlock Holmes', 'To Kill a Mocking Bird']
 >>> books.insert(2, "The Martian")
 >>> books
@@ -259,7 +259,7 @@ ValueError: list.remove(x): x not in list
 
 * get index of an element
 
-```
+```python
 >>> even_numbers = [2, 4, 6, 8, 10]
 >>> even_numbers.index(6)
 2
@@ -271,7 +271,7 @@ ValueError: 12 is not in list
 
 * checking if an element is present
 
-```
+```python
 >>> prime = [2, 3, 5, 7, 11]
 >>> 3 in prime
 True
@@ -281,7 +281,7 @@ False
 
 * sorting
 
-```
+```python
 >>> a = [1, 5.3, 321, 0, 1, 2]
 >>> a.sort()
 >>> a
@@ -295,7 +295,7 @@ False
 
 * reverse list in place
 
-```
+```python
 >>> prime = [2, 3, 5, 7, 11]
 >>> id(prime)
 140684818102088
@@ -317,7 +317,7 @@ False
 
 * size of lists
 
-```
+```python
 >>> prime
 [2, 3, 5, 7, 11]
 >>> len(prime)
@@ -326,7 +326,7 @@ False
 
 * summing numeric lists
 
-```
+```python
 >>> a
 [321, 5.3, 2, 1, 1, 0]
 >>> sum(a)
@@ -335,7 +335,7 @@ False
 
 * `all` and `any`
 
-```
+```python
 >>> conditions = [True, False, True]
 >>> all(conditions)
 False
@@ -355,7 +355,7 @@ True
 
 * comparing lists
 
-```
+```python
 >>> prime
 [2, 3, 5, 7, 11]
 >>> a = [4, 2]

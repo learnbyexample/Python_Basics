@@ -109,7 +109,7 @@ There are many more ways to call a function and other types of declarations, ref
 * By default, `print` function adds newline character
 * This can be changed by passing our own string to the `end` argument
 
-```
+```python
 >>> print("hi")
 hi
 >>> print("hi", end='')
@@ -121,7 +121,7 @@ hi !!
 
 * Printing variables - requires explicit type conversion to `str` for numeric variables when used for string concatenation
 
-```
+```python
 >>> greeting = 'Hello World'
 >>> print(greeting)
 Hello World
@@ -143,7 +143,7 @@ The Ultimate Answer to Life, The Universe and Everything is...42
 
 * `str.format()` can be used to style strings and handle multiple variables more elegantly than string concatenation
 
-```
+```python
 >>> num1 = 42
 >>> num2 = 7
 >>> print("{} + {} = {}".format(num1, num2, num1 + num2))
@@ -152,7 +152,7 @@ The Ultimate Answer to Life, The Universe and Everything is...42
 
 * using numbered arguments
 
-```
+```python
 >>> num1
 42
 >>> num2
@@ -163,7 +163,7 @@ The Ultimate Answer to Life, The Universe and Everything is...42
 
 * number formatting - specified using optional argument number, followed by `:` and then the formatting style
 
-```
+```python
 >>> appx_pi = 22 / 7
 >>> appx_pi
 3.142857142857143
@@ -175,7 +175,7 @@ The Ultimate Answer to Life, The Universe and Everything is...42
 
 * different base
 
-```
+```python
 >>> num1
 42
 >>> print("42 in binary = {:b}".format(num1))
@@ -204,7 +204,7 @@ The Ultimate Answer to Life, The Universe and Everything is...42
 * Note that `range` output doesn't include `stop` value - it is always upto `stop` value but not including it
 * We'll see more about `list` function and data type in later chapters
 
-```
+```python
 >>> range(5)
 range(0, 5)
 
@@ -228,7 +228,7 @@ range(0, 5)
 
 Useful to check data type of a variable or value
 
-```
+```python
 >>> type(5)
 <class 'int'>
 

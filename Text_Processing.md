@@ -16,7 +16,7 @@
 * the first argument to `maketrans()` is string characters to be replaced, the second is characters to replace with and the third is characters to be mapped to `None`
 * [character translation examples](https://stackoverflow.com/questions/555705/character-translation-using-python-like-the-tr-command)
 
-```
+```python
 >>> greeting = '===== Have a great day ====='
 >>> greeting.translate(greeting.maketrans('=','-'))
 '----- Have a great day -----'
@@ -40,7 +40,7 @@
 * only consecutive characters from start/end string are removed
 * by default whitespace characters are stripped
 
-```
+```python
 >>> greeting = '      Have a nice day :)     '
 >>> greeting.strip()
 'Have a nice day :)'
@@ -57,14 +57,14 @@
 * styling
 * width argument specifies total output string length
 
-```
+```python
 >>> ' Hello World '.center(40, '*')
 '************* Hello World **************'
 ```
 
 * changing case and case checking
 
-```
+```python
 >>> sentence = 'thIs iS a saMple StrIng'
 
 >>> sentence.capitalize()
@@ -91,7 +91,7 @@ False
 
 * check if string is made up of numbers
 
-```
+```python
 >>> '1'.isnumeric()
 True
 >>> 'abc1'.isnumeric()
@@ -103,7 +103,7 @@ False
 * split string based on character sequence
 * returns a list
 
-```
+```python
 >>> sentence = 'This is a sample string'
 
 >>> sentence.split()
@@ -122,7 +122,7 @@ False
 
 * joining list of strings
 
-```
+```python
 >>> str_list
 ['This', 'is', 'a', 'sample', 'string']
 >>> ' '.join(str_list)
@@ -136,7 +136,7 @@ False
 * replace characters
 * third argument specifies how many times replace has to be performed
 
-```
+```python
 >>> phrase = '2 be or not 2 be'
 >>> phrase.replace('2', 'to')
 'to be or not to be'
@@ -223,7 +223,7 @@ re.search(pattern, string, flags=0)
 re.findall(pattern, string, flags=0)
 ```
 
-```
+```python
 >>> import re
 >>> string = "This is a sample string"
 
@@ -249,7 +249,7 @@ True
 * using regular expressions
 * use the `r''` format when using regular expression elements
 
-```
+```python
 >>> string
 'This is a sample string'
 
@@ -268,7 +268,7 @@ True
 
 * backreferencing
 
-```
+```python
 >>> quote = "So many books, so little time"
 
 >>> re.search(r'([a-z]{2,}).*\1', quote, re.I)
@@ -292,7 +292,7 @@ re.sub(pattern, repl, string, count=0, flags=0)
 
 * simple substitutions
 
-```
+```python
 >>> sentence = 'This is a sample string'
 >>> re.sub('sample', 'test', sentence)
 'This is a test string'
@@ -309,7 +309,7 @@ re.sub(pattern, repl, string, count=0, flags=0)
 
 * backreferencing
 
-```
+```python
 >>> words = 'night and day'
 >>> re.sub(r'(\w+)( \w+ )(\w+)', r'\3\2\1', words)
 'day and night'
@@ -321,7 +321,7 @@ re.sub(pattern, repl, string, count=0, flags=0)
 
 * using functions in replace part of `re.sub()`
 
-```
+```python
 >>> import math
 >>> numbers = '1 2 3 4 5'
 
@@ -342,7 +342,7 @@ re.sub(pattern, repl, string, count=0, flags=0)
 <br>
 ### <a name="compiling-regular-expressions"></a>Compiling Regular Expressions
 
-```
+```python
 >>> swap_words = re.compile(r'(\w+)( \w+ )(\w+)')
 >>> swap_words
 re.compile('(\\w+)( \\w+ )(\\w+)')

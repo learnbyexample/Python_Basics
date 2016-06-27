@@ -102,7 +102,7 @@ SyntaxError: Missing parentheses in call to 'print'
 * Press `Ctrl+l` to clear the screen, keeping any typed command intact
 * `exit()` to exit
 
-```
+```python
 $ python3
 Python 3.4.3 (default, Oct 14 2015, 20:28:29) 
 [GCC 4.8.4] on linux

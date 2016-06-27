@@ -10,7 +10,7 @@
 
 * Integer examples
 
-```
+```python
 >>> num1 = 7
 >>> num2 = 42
 >>> sum = num1 + num2
@@ -22,17 +22,17 @@
 >>> 34 ** 32
 10170102859315411774579628461341138023025901305856
 
->>> 9/5
+>>> 9 / 5
 1.8
->>> 9//5
+>>> 9 // 5
 1
->>> 9%5
+>>> 9 % 5
 4
 ```
 
 * Floating point examples
 
-```
+```python
 >>> appx_pi = 22 / 7
 >>> area = 42.16
 >>> appx_pi + area
@@ -46,7 +46,7 @@
 
 * the [E scientific notation](https://en.wikipedia.org/wiki/Scientific_notation#E_notation) can be used as well
 
-```
+```python
 >>> sci_num1 = 3.982e5
 >>> sci_num2 = 9.32e-1
 >>> sci_num1 + sci_num2
@@ -56,7 +56,7 @@
 * Octal numbers are prefixed with `0o` or `0O` (i.e digit 0 followed by lower/upper case letter o)
 * Similarly, Hexadecimal numbers are prefixed with `0x` or `0X`
 
-```
+```python
 >>> oct_num = 0o12
 >>> hex_num = 0xF
 >>> oct_num
@@ -80,7 +80,7 @@
 * strings can be declared using single or double quotes
 * Use `\` to escape quotes which are part of string itself if the string contains both single and double quotes
 
-```
+```python
 >>> str1 = 'This is a string'
 >>> str1
 'This is a string'
@@ -96,7 +96,7 @@ It's a nice and warm day
 
 * Escape sequences like newline character `\n` can be used within string declaration
 
-```
+```python
 >>> colors = 'Blue\nRed\nGreen'
 >>> colors
 'Blue\nRed\nGreen'
@@ -108,7 +108,7 @@ Green
 
 * Use `r` prefix if you do not want escape sequences to be interpreted
 
-```
+```python
 >>> raw_str = r"tr '\n' ' ' < list.txt"
 >>> raw_str
 "tr '\\n' ' ' < list.txt"
@@ -123,7 +123,7 @@ tr '
 
 * String concatenation and repetition
 
-```
+```python
 >>> str1
 'This is a string'
 >>> str2 = ' with concatenation'
@@ -156,7 +156,7 @@ Paraphrased from [Python docs - constants](https://docs.python.org/3/library/con
 * `True` The true value of the `bool` type
 * [Python docs - Truth Value Testing](https://docs.python.org/3/library/stdtypes.html#truth)
 
-```
+```python
 >>> bool(2)
 True
 >>> bool(0)

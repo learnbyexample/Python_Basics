@@ -9,7 +9,7 @@
 <br>
 ### <a name="condition-checking"></a>Condition checking
 
-```
+```python
 >>> num = 5
 >>> num > 2
 True
