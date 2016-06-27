@@ -43,6 +43,7 @@ print(num_square(my_num))
     * 4-space indentation is recommended
     * [Python docs - Coding Style](https://docs.python.org/3/tutorial/controlflow.html#intermezzo-coding-style)
 * The default `return` value is `None`
+* [How variables are passed to functions in Python](http://robertheaton.com/2014/02/09/pythons-pass-by-object-reference-as-explained-by-philip-k-dick/)
 
 ```
 $ ./functions.py 
