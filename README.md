@@ -23,6 +23,9 @@ Introduction to Python - Syntax, working with Shell commands, Files, Text Proces
     * Condition checking, if, for, while, continue and break
 * [Lists](./Lists.md)
     * Assigning List variables, Slicing and Modifying Lists, Copying Lists, List Methods and Miscellaneous, Looping, List Comprehension
+* [Command line arguments](./Command_line_arguments.md)
+    * Known number of arguments, Varying number of arguments, Using program name in code, Command line switches
+
 
 <br>
 # <a name="ebook"></a>ebook
