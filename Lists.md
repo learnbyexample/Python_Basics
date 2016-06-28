@@ -293,6 +293,16 @@ False
 [321, 5.3, 2, 1, 1, 0]
 ```
 
+* `min` and `max`
+
+```python
+>>> a = [321, 899.232, 5.3, 2, 1, -1]
+>>> min(a)
+-1
+>>> max(a)
+899.232
+```
+
 * reverse list in place
 
 ```python
@@ -454,7 +464,7 @@ for idx, item in enumerate(north_dishes):
     print("{}. {}".format(idx + 1, item))
 ```
 
-* `enumerate()` returns a `tuples` data type, more info on `tuples` in later chapters
+* `enumerate()` returns a `Tuple` data type, more info on tuples in later chapters
 
 ```
 $ ./list_looping_enumeration.py
