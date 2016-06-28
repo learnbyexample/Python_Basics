@@ -100,6 +100,22 @@ False
 False
 ```
 
+* check if character sequence is present or not
+
+```python
+>>> sentence = 'This is a sample string'
+>>> 'is' in sentence
+True
+>>> 'this' in sentence
+False
+>>> 'This' in sentence
+True
+>>> 'is a' in sentence
+True
+>>> 'test' not in sentence
+True
+```
+
 * split string based on character sequence
 * returns a list
 
