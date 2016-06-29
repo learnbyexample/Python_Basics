@@ -122,7 +122,7 @@ IndexError: list index out of range
 10105920
 ```
 
-* But for variables referring to mutable types like lists, it is important to how variables are copied and passed to functions
+* But for variables referring to mutable types like lists, it is important to know how variables are copied and passed to functions
 * When an element of list variable is modified, it does so by changing the value (mutation) of object at that index
 
 ```python
