@@ -99,6 +99,15 @@ File 'xyz.py' not found
 File 'abc.py' not found
 ```
 
+* use `os` module instead of `pathlib` for file checking if your Python version is not 3.4 and higher
+
+```python
+import os
+
+if not os.path.isfile(filename):
+    sys.exit("File '{}' not found".format(filename))
+```
+
 <br>
 ### <a name="using-program-name-in-code"></a>Using program name in code
 
