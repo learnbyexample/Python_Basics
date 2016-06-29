@@ -31,6 +31,8 @@ Introduction to Python - Syntax, working with Shell commands, Files, Text Proces
     * open function, Reading files, Writing to files
 * [Command line arguments](./Command_line_arguments.md)
     * Known number of arguments, Varying number of arguments, Using program name in code, Command line switches
+* [Exception Handling and Debugging](./Exception_Handling_and_Debugging.md)
+    * Exception Handling, Syntax check, pdb, Importing program
 
 
 <br>
