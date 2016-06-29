@@ -307,10 +307,17 @@ re.sub(pattern, repl, string, count=0, flags=0)
 ```
 
 * simple substitutions
+* `re.sub` will not change value of variable passed to it, has to be explicity assigned
 
 ```python
 >>> sentence = 'This is a sample string'
 >>> re.sub('sample', 'test', sentence)
+'This is a test string'
+
+>>> sentence
+'This is a sample string'
+>>> sentence = re.sub('sample', 'test', sentence)
+>>> sentence
 'This is a test string'
 
 >>> re.sub('/', '-', '25/06/2016')
@@ -331,7 +338,7 @@ re.sub(pattern, repl, string, count=0, flags=0)
 'day and night'
 
 >>> line = 'Can you spot the the mistakes? I i seem to not'
->>> re.sub(r'\b(\w+) \1', r'\1', line, flags=re.I)
+>>> re.sub(r'\b(\w+) \1\b', r'\1', line, flags=re.I)
 'Can you spot the mistakes? I seem to not'
 ```
 
