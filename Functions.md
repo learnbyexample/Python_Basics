@@ -96,6 +96,19 @@ Style character =
 =============================
 ```
 
+* Triple quoted comment describing function purpose is a usually followed guideline 
+* To avoid distraction from example code, docstrings for programs and functions won't be generally used in this material
+    * Example usage will be discussed briefly in a separate chapter
+
+```python
+def num_square(num):
+    """
+    returns square of number
+    """
+
+    return num * num
+```
+
 **Further Reading**
 
 There are many more ways to call a function and other types of declarations, refer the below links for more info
