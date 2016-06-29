@@ -139,11 +139,46 @@ This is a string with concatenation
 buffalo buffalo buffalo buffalo buffalo buffalo buffalo buffalo 
 ```
 
+* Triple quoted strings
+* like single line strings, `"""` or `'''` can be used as required as well as escape characters using `\`
+
+```python
+#!/usr/bin/python3
+
+"""
+This line is part of multiline comment
+
+This program shows examples of triple quoted strings
+"""
+
+# assigning multiple line string to variable
+poem = """\
+The woods are lovely, dark and deep,   
+But I have promises to keep,   
+And miles to go before I sleep,   
+And miles to go before I sleep.
+"""
+
+print(poem, end='')
+```
+
+* Triple quoted strings are also serve as docstrings (documentation), examples in later chapters
+
+```
+$ ./triple_quoted_string.py 
+The woods are lovely, dark and deep,   
+But I have promises to keep,   
+And miles to go before I sleep,   
+And miles to go before I sleep.
+$
+```
+
 **Further Reading**
 
 * [Python docs - strings](https://docs.python.org/3/tutorial/introduction.html#strings)
 * [Python docs - List of Escape Sequences and more info on strings](https://docs.python.org/3/reference/lexical_analysis.html#strings)
 * [Python docs - Binary Sequence Types](https://docs.python.org/3/library/stdtypes.html#binary-sequence-types-bytes-bytearray-memoryview)
+* [formatting triple quoted strings](https://stackoverflow.com/questions/3877623/in-python-can-you-have-variables-within-triple-quotes-if-so-how)
 
 <br>
 ### <a name="constants"></a>Constants
