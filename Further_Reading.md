@@ -18,12 +18,12 @@
 <br>
 ### <a name="useful-links-on-coding"></a>Useful links on coding
 
-* [Python docs - FAQ](https://docs.python.org/3/faq/index.html
+* [Python docs - FAQ](https://docs.python.org/3/faq/index.html)
 * [list of common questions on stackoverflow](http://sopython.com/canon/)
 * [profiling Python code for performance](http://tutorials.pluralsight.com/python/quick-profiling-in-python)
 * [pylint](https://www.pylint.org/)
 * [code patterns](http://docs.quantifiedcode.com/python-code-patterns/)
-* [PerformanceTips](https://wiki.python.org/moin/PythonSpeed/PerformanceTips)
+* [Performance tips](https://wiki.python.org/moin/PythonSpeed/PerformanceTips)
 
 <br>
 ### <a name="python-extensions"></a>Python extensions
