@@ -83,6 +83,17 @@ $ ./syntax_error.py
 SyntaxError: Missing parentheses in call to 'print'
 ```
 
+* single line comments start with `#`
+   * `#!` has special meaning only on first line of program
+* we will see multiline comments in later chapters
+
+```python
+#!/usr/bin/python3
+
+# Greeting message
+print("Hello World")
+```
+
 **Further Reading**
 
 * [Python docs - version 3](https://docs.python.org/3/index.html)
