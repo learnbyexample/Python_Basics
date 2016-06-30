@@ -73,6 +73,7 @@
 * [decimal](https://docs.python.org/3/library/decimal.html)
 * [fractions](https://docs.python.org/3/library/fractions.html)
 * [complex](https://docs.python.org/3/library/functions.html#complex)
+* [Python docs - keywords](https://docs.python.org/3/reference/lexical_analysis.html#keywords) - do not use these as variables
 
 <br>
 ### <a name="string"></a>String
