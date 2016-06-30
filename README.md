@@ -33,7 +33,10 @@ Introduction to Python - Syntax, working with Shell commands, Files, Text Proces
     * Known number of arguments, Varying number of arguments, Using program name in code, Command line switches
 * [Exception Handling and Debugging](./Exception_Handling_and_Debugging.md)
     * Exception Handling, Syntax check, pdb, Importing program
-
+* [Docstrings](./Docstrings.md)
+    * Style guide, Palindrome example
+* [Further Reading](./Further_Reading.md)
+    * Standard topics not covered, Useful links on coding, Python extensions
 
 <br>
 # <a name="ebook"></a>ebook
