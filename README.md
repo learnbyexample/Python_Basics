@@ -49,6 +49,7 @@ Introduction to Python - Syntax, working with Shell commands, Files, Text Proces
 
 * [Devs and Hackers](http://slack.devup.in/) - helpful slack group
 * [Weekly Coders, Hackers & All Tech related thread](https://www.reddit.com/r/india/search?q=Weekly+Coders%2C+Hackers+%26+All+Tech+related+thread+author%3Aavinassh&amp;restrict_sr=on&amp;sort=new&amp;t=all) - for suggestions and critique
+* [/r/learnpython/](https://www.reddit.com/r/learnpython/) - helpful forum for beginners and experienced programmers alike
 
 <br>
 # <a name="license"></a>License
