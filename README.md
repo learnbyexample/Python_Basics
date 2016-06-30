@@ -41,7 +41,8 @@ Introduction to Python - Syntax, working with Shell commands, Files, Text Proces
 <br>
 # <a name="ebook"></a>ebook
 
-* Once all chapters are done...
+* Read as ebook on [gitbook](https://learnbyexample.gitbooks.io/python-basics/content/index.html)
+* Download ebook for offline reading - [link](https://www.gitbook.com/book/learnbyexample/python-basics/details)
 
 <br>
 # <a name="credits"></a>Credits
