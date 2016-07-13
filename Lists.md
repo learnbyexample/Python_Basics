@@ -216,7 +216,7 @@ IndexError: list index out of range
 [[1, 3], [2, 4], [5, 6]]
 ```
 
-* deleting elements from a list - based on index and value
+* deleting elements from a list - based on index
 
 ```python
 >>> prime = [2, 3, 5, 7, 11]
@@ -229,6 +229,21 @@ IndexError: list index out of range
 >>> prime
 [3, 5, 7]
 
+>>> list_2D = [[1, 3, 2, 10], [1.2, -0.2, 0, 2]]
+>>> list_2D[0].pop(0)
+1
+>>> list_2D
+[[3, 2, 10], [1.2, -0.2, 0, 2]]
+
+>>> list_2D.pop(1)
+[1.2, -0.2, 0, 2]
+>>> list_2D
+[[3, 2, 10]]
+```
+
+* clearing list and alternate method to delete elements
+
+```python
 >>> prime.clear()
 >>> prime
 []
@@ -238,6 +253,19 @@ IndexError: list index out of range
 >>> books
 ['Harry Potter', 'To Kill a Mocking Bird']
 
+>>> list_2D = [[1, 3, 2, 10], [1.2, -0.2, 0, 2]]
+>>> del list_2D[0][1]
+>>> list_2D
+[[1, 2, 10], [1.2, -0.2, 0, 2]]
+
+>>> del list_2D[0]
+>>> list_2D
+[[1.2, -0.2, 0, 2]]
+```
+
+* deleting elements from a list - based on value
+ 
+```python
 >>> even_numbers = [2, 4, 6, 8, 10]
 >>> even_numbers.remove(8)
 >>> even_numbers
