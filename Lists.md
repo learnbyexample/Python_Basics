@@ -6,6 +6,7 @@
 * [List Methods and Miscellaneous](#list-methods-and-miscellaneous)
 * [Looping](#looping)
 * [List Comprehension](#list-comprehension)
+* [Getting List as user input](#list-user-input)
 
 <br>
 ### <a name="assigning-list-variables"></a>Assigning List variables
@@ -584,3 +585,25 @@ For more examples, including nested loops, check these
 * [Python docs - perf_counter](https://docs.python.org/3/library/time.html#time.perf_counter)
     * [understanding perf_counter and process_time](http://stackoverflow.com/questions/25785243/understanding-time-perf-counter-and-time-process-time)
 * [Python docs - timeit](https://docs.python.org/3/library/timeit.html)
+
+<br>
+### <a name="list-user-input"></a>Getting List as user input
+
+```python
+>>> b = list(input('Enter strings separated by space: ').split())
+Enter strings separated by space: foo bar baz
+>>> b
+['foo', 'bar', 'baz']
+
+>>> nums = [int(n) for n in input('Enter numbers separated by space: ').split()]
+Enter numbers separated by space: 1 23 5
+>>> nums
+[1, 23, 5]
+
+>>> primes = [int(n) for n in input('Enter prime numbers separated by comma: ').split(',')]
+Enter prime numbers separated by comma: 3,5,7
+>>> primes
+[3, 5, 7]
+```
+
+* Since user input is all treated as string, need to process based on agreed delimiter and required data type
