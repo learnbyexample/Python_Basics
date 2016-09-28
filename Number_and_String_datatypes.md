@@ -5,6 +5,8 @@
 * [Constants](#constants)
 * [Built-in Operators](#built-in-operators)
 
+Variable data type is automatically determined by Python. They only need to be assigned some value before using it elsewhere - like print function or part of expression
+
 <br>
 ### <a name="numbers"></a>Numbers
 
@@ -93,6 +95,10 @@
 "It's a nice and warm day"
 >>> print(weather)
 It's a nice and warm day
+
+>>> weather = 'It\'s a nice and warm day'
+>>> weather
+"It's a nice and warm day"
 ```
 
 * Escape sequences like newline character `\n` can be used within string declaration
@@ -107,7 +113,7 @@ Red
 Green
 ```
 
-* Use `r` prefix if you do not want escape sequences to be interpreted
+* Use `r` prefix (stands for **raw**) if you do not want escape sequences to be interpreted
 
 ```python
 >>> raw_str = r"tr '\n' ' ' < list.txt"
@@ -163,7 +169,7 @@ And miles to go before I sleep.
 print(poem, end='')
 ```
 
-* Triple quoted strings are also serve as docstrings (documentation), examples in later chapters
+* Triple quoted strings are also serve as **docstrings** (documentation), examples in later chapters
 
 ```
 $ ./triple_quoted_string.py 
@@ -211,7 +217,7 @@ True
     * `-` subtraction
     * `*` multiplication
     * `/` division (float output)
-    * `//` division (integer output)
+    * `//` division (integer output, result is not rounded)
     * `**` exponentiation
     * `%` modulo
 * string operators
