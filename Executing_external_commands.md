@@ -106,6 +106,18 @@ cmd = "grep -h 'test' report.log test_list.txt > grep_test.txt"
 subprocess.call(cmd, shell=True)
 ```
 
+**Workaround to avoid using shell=True**
+
+```python
+>>> import subprocess, os
+>>> subprocess.call(['echo', 'Hello', os.environ.get("USER")])
+Hello learnbyexample
+0
+```
+
+* `os.environ.get("USER")` gives back the value of environment variable `USER`
+* `0` is the exit status, meaning success. It is a caveat of python interpreter which displays return value too
+
 <br>
 ### <a name="getting-command-output-and-redirections"></a>Getting command output and redirections
 
