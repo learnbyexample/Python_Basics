@@ -118,7 +118,7 @@ IndexError: list index out of range
 >>> b
 4
 >>> a
-5
+10
 >>> id(b)
 10105920
 ```
