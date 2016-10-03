@@ -125,7 +125,7 @@ TypeError: 'tuple' object does not support item assignment
 
 * Example operations
 
-```
+```python
 >>> 'roti' in north_dishes
 False
 >>> 'Makki roti' in north_dishes
@@ -180,7 +180,7 @@ Poha
 ((1, 2), (4, 3), (92, 3))
 
 >>> prime = [2, 3, 5, 7, 11]
->>> prime_tuple = tuple([(idx + 1, num) for idx, num in enumerate(prime)])
+>>> prime_tuple = tuple((idx + 1, num) for idx, num in enumerate(prime))
 >>> prime_tuple
 ((1, 2), (2, 3), (3, 5), (4, 7), (5, 11))
 ```
