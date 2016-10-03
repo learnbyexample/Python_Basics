@@ -110,6 +110,8 @@ True
 False
 >>> 'This' in sentence
 True
+>>> 'this' in sentence.lower()
+True
 >>> 'is a' in sentence
 True
 >>> 'test' not in sentence
@@ -369,6 +371,8 @@ re.sub(pattern, repl, string, count=0, flags=0)
 >>> swap_words = re.compile(r'(\w+)( \w+ )(\w+)')
 >>> swap_words
 re.compile('(\\w+)( \\w+ )(\\w+)')
+
+>>> words = 'night and day'
 
 >>> swap_words.search(words).group()
 'night and day'
