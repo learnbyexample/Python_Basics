@@ -39,6 +39,7 @@
 * removing leading/trailing/both characters
 * only consecutive characters from start/end string are removed
 * by default whitespace characters are stripped
+* if more than one character is specified, it is treated as a set and all combinations of it are used
 
 ```python
 >>> greeting = '      Have a nice day :)     '
@@ -48,6 +49,9 @@
 '      Have a nice day :)'
 >>> greeting.lstrip()
 'Have a nice day :)     '
+
+>>> greeting.strip(') :')
+'Have a nice day'
 
 >>> greeting = '===== Have a great day!! ====='
 >>> greeting.strip('=')
@@ -118,8 +122,26 @@ True
 True
 ```
 
+* matching character sequence at start/end of string
+
+```python
+>>> sentence
+'This is a sample string'
+
+>>> sentence.startswith('This')
+True
+>>> sentence.startswith('The')
+False
+
+>>> sentence.endswith('ing')
+True
+>>> sentence.endswith('ly')
+False
+```
+
 * split string based on character sequence
 * returns a list
+* to split using regular expressions, use `re.split()` instead
 
 ```python
 >>> sentence = 'This is a sample string'
@@ -136,6 +158,11 @@ True
 ['a', 'e i o u']
 >>> "a e i o u".split(' ', maxsplit=2) 
 ['a', 'e', 'i o u']
+
+>>> line = '(1.0 2.0 3.0)'
+>>> nums = [float(s) for s in line.strip('()').split()]
+>>> nums
+[1.0, 2.0, 3.0]
 ```
 
 * joining list of strings
@@ -231,14 +258,16 @@ True
 <br>
 ### <a name="pattern-matching-and-extraction"></a>Pattern matching and extraction
 
-* matching sequence of characters
+* matching/extracting sequence of characters
 * use `re.search()` to see if a string contains a pattern or not
 * use `re.findall()` to get a list of matching patterns
+* use `re.split()` to get a list from splitting a string based on a pattern
 * their syntax given below
 
 ```python
 re.search(pattern, string, flags=0)
 re.findall(pattern, string, flags=0)
+re.split(pattern, string, maxsplit=0, flags=0)
 ```
 
 ```python
@@ -282,6 +311,15 @@ True
 
 >>> re.findall(r'\w+', string)
 ['This', 'is', 'a', 'sample', 'string']
+
+>>> re.split(r'\s+', string)
+['This', 'is', 'a', 'sample', 'string']
+
+>>> re.split(r'\d+', 'Sample123string54with908numbers')
+['Sample', 'string', 'with', 'numbers']
+
+>>> re.split(r'(\d+)', 'Sample123string54with908numbers')
+['Sample', '123', 'string', '54', 'with', '908', 'numbers']
 ```
 
 * backreferencing
