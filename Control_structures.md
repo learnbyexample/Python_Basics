@@ -9,6 +9,8 @@
 <br>
 ### <a name="condition-checking"></a>Condition checking
 
+* simple and combination of tests
+
 ```python
 >>> num = 5
 >>> num > 2
@@ -17,6 +19,8 @@ True
 True
 >>> 3 < num <= 5
 True
+>>> num % 3 == 0 or num % 5 == 0
+True
 
 >>> fav_fiction = 'Harry Potter'
 >>> fav_detective = 'Sherlock Holmes'
@@ -24,7 +28,11 @@ True
 False
 >>> fav_fiction == "Harry Potter"
 True
+```
 
+* Testing variable or value by themselves
+
+```python
 >>> bool(num)
 True
 >>> bool(fav_detective)
@@ -37,8 +45,46 @@ False
 False
 >>> bool(None)
 False
+
+>>> if -1:
+...     print("-1 evaluates to True in condition checking")
+... 
+-1 evaluates to True in condition checking
 ```
 
+* The use of `in` operator in condition checking
+
+Compare this way of checking
+
+```python
+>>> def num_chk(n):
+...     if n == 10 or n == 21 or n == 33:
+...         print("Number passes condition")
+...     else:
+...         print("Number fails condition")
+... 
+>>> num_chk(10)
+Number passes condition
+>>> num_chk(12)
+Number fails condition
+```
+
+vs this one
+
+```python
+>>> def num_chk(n):
+...     if n in (10,21,33):
+...         print("Number passes condition")
+...     else:
+...         print("Number fails condition")
+... 
+>>> num_chk(12)
+Number fails condition
+>>> num_chk(10)
+Number passes condition
+```
+
+* `(10,21,33)` is a tuple data type, will be covered in later chapters
 * [Python docs - Truth Value Testing](https://docs.python.org/3/library/stdtypes.html#truth)
 
 <br>
