@@ -590,7 +590,7 @@ For more examples, including nested loops, check these
 ### <a name="list-user-input"></a>Getting List as user input
 
 ```python
->>> b = list(input('Enter strings separated by space: ').split())
+>>> b = input('Enter strings separated by space: ').split()
 Enter strings separated by space: foo bar baz
 >>> b
 ['foo', 'bar', 'baz']
