@@ -361,6 +361,12 @@ False
 [2, 3, 5, 7, 11]
 >>> len(prime)
 5
+
+>>> s = len(prime) // 2
+>>> prime[:s]
+[2, 3]
+>>> prime[s:]
+[5, 7, 11]
 ```
 
 * summing numeric lists
