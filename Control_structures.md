@@ -73,7 +73,7 @@ vs this one
 
 ```python
 >>> def num_chk(n):
-...     if n in (10,21,33):
+...     if n in (10, 21, 33):
 ...         print("Number passes condition")
 ...     else:
 ...         print("Number fails condition")
