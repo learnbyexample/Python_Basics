@@ -60,6 +60,7 @@ IndexError: list index out of range
 
 * Like the `range()` function, list index has `start:stop:step` format, `stop` value being non-inclusive
 * The indexing format can be used to extract from list variable or modify itself
+* [stackoverflow - explain slice notation](https://stackoverflow.com/questions/509211/explain-pythons-slice-notation)
 
 ```python
 >>> books = ['Harry Potter', 'Sherlock Holmes', 'To Kill a Mocking Bird']
