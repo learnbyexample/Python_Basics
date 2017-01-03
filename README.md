@@ -35,6 +35,8 @@ Introduction to Python - Syntax, working with Shell commands, Files, Text Proces
     * Exception Handling, Syntax check, pdb, Importing program
 * [Docstrings](./Docstrings.md)
     * Style guide, Palindrome example
+* [Testing](./Testing.md)
+    * assert statement, Using assert to test a program, Using unittest framework, Using unittest.mock to test user input and program output, Other testing frameworks
 * [Further Reading](./Further_Reading.md)
     * Standard topics not covered, Useful links on coding, Python extensions
 
