@@ -180,14 +180,22 @@ False
 
 * replace characters
 * third argument specifies how many times replace has to be performed
+* variable has to be explicitly re-assigned to change its value
 
 ```python
 >>> phrase = '2 be or not 2 be'
 >>> phrase.replace('2', 'to')
 'to be or not to be'
 
+>>> phrase
+'2 be or not 2 be'
+
 >>> phrase.replace('2', 'to', 1)
 'to be or not 2 be'
+
+>>> phrase = phrase.replace('2', 'to')
+>>> phrase
+'to be or not to be'
 ```
 
 **Further Reading**
