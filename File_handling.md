@@ -3,6 +3,7 @@
 * [open function](#open-function)
 * [Reading files](#reading-files)
 * [Writing to files](#writing-to-files)
+* [Inplace editing with fileinput](#inplace-editing-with-fileinput)
 
 <br>
 ### <a name="open-function"></a>open function
@@ -55,7 +56,7 @@ with open(filename, 'r', encoding='ascii') as f:
 * default encoding is usually 'UTF-8', use 'ascii' where applicable
 * using `with` and file handle name as `f` is usual convention
 
-```
+```bash
 $ ./file_reading.py
 Contents of hello_world.py
 ------------------------------
@@ -86,7 +87,7 @@ with open('xyz.py', 'r', encoding='ascii') as f:
 
 * Error if file is not found
 
-```
+```bash
 $ ./file_reading_error.py 
 Traceback (most recent call last):
   File "./file_reading_error.py", line 3, in <module>
@@ -164,9 +165,52 @@ with open('new_file.txt', 'w', encoding='ascii') as f:
 * Use the `write()` method to print a string to files
 * To add text to an existing file, use 'a' mode instead of 'w'
 
-```
+```bash
 $ ./file_writing.py
 $ cat new_file.txt 
 This is a sample line of text
 Yet another line
+```
+
+<br>
+### <a name="inplace-editing-with-fileinput"></a>Inplace editing with fileinput
+
+```python
+#!/usr/bin/python3
+
+import fileinput
+
+with fileinput.input(inplace=True) as f:
+    for line in f:
+        line = line.replace('line of text', 'line')
+        print(line, end='')
+```
+
+* The files to be modified are specified as [Command line arguments](./Command_line_arguments.md) when the program is run
+* Note that `print` function has to be used instead of `f.write`
+* Since the line read every iteration already has newline character, **end** is assigned empty string
+* [Python docs - fileinput](https://docs.python.org/3/library/fileinput.html)
+
+```bash
+$ ./inplace_file_editing.py new_file.txt
+$ cat new_file.txt 
+This is a sample line
+Yet another line
+
+$ # to change all files in current directory ending with .txt, use
+$ ./inplace_file_editing.py *.txt
+
+$ # stdin can also be passed as input, inplace gets disabled
+$ echo 'a line of text' | ./inplace_file_editing.py
+a line
+```
+
+* specifying filenames and backup extensions
+
+```python
+# To specify filenames within the program itself
+with fileinput.input(inplace=True, files=('file1.txt', 'file2.txt')) as f:
+
+# To create backup of unmodified files, pass an extension to backup parameter
+with fileinput.input(inplace=True, backup='.bkp') as f:
 ```
