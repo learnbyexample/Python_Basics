@@ -7,6 +7,7 @@
 * [Looping](#looping)
 * [List Comprehension](#list-comprehension)
 * [Getting List as user input](#list-user-input)
+* [Getting random items from list](#getting-random-items-from-list)
 
 <br>
 ### <a name="assigning-list-variables"></a>Assigning List variables
@@ -614,3 +615,37 @@ Enter prime numbers separated by comma: 3,5,7
 ```
 
 * Since user input is all treated as string, need to process based on agreed delimiter and required data type
+
+<br>
+### <a name="getting-random-items-from-list"></a>Getting random items from list
+
+* Get a random item
+
+```python
+>>> import random
+>>> a = [4, 5, 2, 76]
+>>> random.choice(a)
+76
+>>> random.choice(a)
+4
+```
+
+* Randomly re-arrange items of list
+
+```python
+>>> random.shuffle(a)
+>>> a
+[5, 2, 76, 4]
+```
+
+* Get random slice of list, doesn't modify the list variable
+
+```python
+>>> random.sample(a, k=3)
+[76, 2, 5]
+
+>>> random.sample(range(1000), k=5)
+[68, 203, 15, 757, 580]
+```
+
+* See [Python docs - random](https://docs.python.org/3/library/random.html) for more info and also new in version 3.6 - `random.choices`
