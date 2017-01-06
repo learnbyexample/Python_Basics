@@ -84,7 +84,7 @@ Number fails condition
 Number passes condition
 ```
 
-* `(10,21,33)` is a tuple data type, will be covered in later chapters
+* `(10, 21, 33)` is a tuple data type, will be covered in later chapters
 * [Python docs - Truth Value Testing](https://docs.python.org/3/library/stdtypes.html#truth)
 
 <br>
@@ -249,6 +249,7 @@ print("Random number divisible by 4 and 6: {}".format(random_int))
 ```
 
 * `while True:` is generally used as infinite loop
+* **randrange** has similar `start, stop, step` arguments as [range](./Functions.md#range-function)
 * [Python docs - random](https://docs.python.org/3/library/random.html)
 
 ```
@@ -258,6 +259,20 @@ $ ./loop_with_break.py
 Random number divisible by 4 and 6: 216
 $ ./loop_with_break.py 
 Random number divisible by 4 and 6: 24
+```
+
+The while_loop.py example can be re-written using `break`
+
+```python
+>>> while True:
+         usr_string = input("Enter a positive integer: ")
+         if usr_string.isnumeric():
+             break
+    
+Enter a positive integer: a
+Enter a positive integer: 3.14
+Enter a positive integer: 1
+>>>
 ```
 
 * in case of nested loops, `continue` and `break` only affect the immediate parent loop
