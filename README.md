@@ -22,7 +22,7 @@ Introduction to Python - Syntax, working with Shell commands, Files, Text Proces
 * [Control Structures](./Control_structures.md)
     * Condition checking, if, for, while, continue and break
 * [Lists](./Lists.md)
-    * Assigning List variables, Slicing and Modifying Lists, Copying Lists, List Methods and Miscellaneous, Looping, List Comprehension
+    * Assigning List variables, Slicing and Modifying Lists, Copying Lists, List Methods and Miscellaneous, Looping, List Comprehension, Getting List as user input, Getting random items from list
 * [Sequence, Set and Dict data types](./Sequence_Set_Dict_data_types.md)
     * Strings, Tuples, Set, Dictionary
 * [Text Processing](./Text_Processing.md)
