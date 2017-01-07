@@ -648,4 +648,39 @@ Enter prime numbers separated by comma: 3,5,7
 [68, 203, 15, 757, 580]
 ```
 
+* Get random items from list without repetition using [yield](https://stackoverflow.com/questions/231767/what-is-the-function-of-the-yield-keyword)
+* The difference from simply using shuffled list is that this avoids the need to maintain a separate index counter, especially useful if there are multiple lists to be randomized
+* The `print` and `for` loop shown is only to demonstrate that items can be obtained one at a time
+
+```python
+>>> def rand_items(ip_list):
+        rand_list = ip_list[:]
+        random.shuffle(rand_list)
+        for item in rand_list:
+            yield item
+    
+>>> nums = [1, 3, 6, -12, 1.2, 3.14]
+>>> my_gen = rand_items(nums)
+>>> print(next(my_gen))
+3.14
+>>> print(next(my_gen))
+1.2
+>>> for n in my_gen:
+        print(n)
+    
+1
+3
+-12
+6
+
+>>> books = ['Harry Potter', 'Sherlock Holmes', 'To Kill a Mocking Bird']
+>>> rand_books = rand_items(books)
+>>> for book in rand_books:
+        print(book)
+    
+To Kill a Mocking Bird
+Harry Potter
+Sherlock Holmes
+```
+
 * See [Python docs - random](https://docs.python.org/3/library/random.html) for more info and also new in version 3.6 - `random.choices`
