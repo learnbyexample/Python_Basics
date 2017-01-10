@@ -458,7 +458,7 @@ Would you like to have 'East' speciality 'momo' today?
 * [Python docs - del](https://docs.python.org/3/reference/simple_stmts.html#del)
 * [Python docs - len](https://docs.python.org/3/library/functions.html#len)
 * [Python docs - dir](https://docs.python.org/3/library/functions.html#dir)
-* [Python docs - sort](https://docs.python.org/3/library/stdtypes.html#list.sort)
+* [Python docs - sort](https://docs.python.org/3/library/stdtypes.html#list.sort) and [Python docs - sorted](https://docs.python.org/3/library/functions.html#sorted)
 * [Python docs - various techniques for sorting data](https://docs.python.org/3/howto/sorting.html#sortinghowto)
 * [Python docs - all, any](https://docs.python.org/3/library/functions.html#all)
 
