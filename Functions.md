@@ -132,6 +132,41 @@ hi !!
 >>> 
 ```
 
+* The [help](https://docs.python.org/3/library/functions.html#help) function can be used to get quick help from interpreter itself
+* Press `q` to return back from help page
+
+```python
+>>> help(print)
+
+Help on built-in function print in module builtins:
+
+print(...)
+    print(value, ..., sep=' ', end='\n', file=sys.stdout, flush=False)
+    
+    Prints the values to a stream, or to sys.stdout by default.
+    Optional keyword arguments:
+    file:  a file-like object (stream); defaults to the current sys.stdout.
+    sep:   string inserted between values, default a space.
+    end:   string appended after the last value, default a newline.
+    flush: whether to forcibly flush the stream.
+```
+
+* Multiple arguments to `print` function can be passed by `,` separation
+* The default `sep` is single space character
+
+```python
+>>> a = 5
+>>> b = 2
+>>> print(a+b, a-b)
+7 3
+
+>>> print(a+b, a-b, sep=' : ')
+7 : 3
+>>> print(a+b, a-b, sep='\n')
+7
+3
+```
+
 * Printing variables - requires explicit type conversion to `str` for numeric variables when used for string concatenation
 
 ```python
@@ -143,6 +178,8 @@ Hello World
 42
 
 >>> print(greeting + '. We are learning Python')
+Hello World. We are learning Python
+>>> print(greeting, '. We are learning Python', sep='')
 Hello World. We are learning Python
 
 >>> print("The Ultimate Answer to Life, The Universe and Everything is..." + num)
