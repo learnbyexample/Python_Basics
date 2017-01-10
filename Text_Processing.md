@@ -213,10 +213,10 @@ False
 | ^ | anchor, match from beginning of string |
 | $ | anchor, match end of string |
 | . | Match any character except newline character \n |
-| \| | OR operator for matching multiple patterns |
+| &#124; | OR operator for matching multiple patterns |
 | () | for grouping patterns and also extraction |
 | [] | Character class - match one character among many |
-| \\^ | use \ to match meta characters like ^ |
+| &#92;^ | use \ to match meta characters like ^ |
 
 <br>
 
@@ -234,14 +234,14 @@ False
 | Character classes | Description |
 | ------------- | ----------- |
 | [aeiou] | Match any vowel |
-| [^aeiou] | ^ inverts selection, so this matches any consonant |
+| \[^aeiou] | ^ inverts selection, so this matches any consonant |
 | [a-f] | Match any of abcdef character |
 | \d | Match a digit, same as [0-9] |
-| \D | Match non-digit, same as [^0-9] or [^\d] |
+| \D | Match non-digit, same as \[^0-9] or \[^\d] |
 | \w | Match alphanumeric and underscore character, same as [a-zA-Z_] |
-| \W | Match non-alphanumeric and underscore character, same as [^a-zA-Z_] or [^\w] |
+| \W | Match non-alphanumeric and underscore character, same as \[^a-zA-Z_] or \[^\w] |
 | \s | Match white-space character, same as [\ \t\n\r\f\v] |
-| \S | Match non white-space character, same as [^\s] |
+| \S | Match non white-space character, same as \[^\s] |
 | \b | word boundary, word defined as sequence of alphanumeric characters |
 | \B | not a word boundary |
 
