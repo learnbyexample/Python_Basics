@@ -648,19 +648,13 @@ Enter prime numbers separated by comma: 3,5,7
 [68, 203, 15, 757, 580]
 ```
 
-* Get random items from list without repetition using [yield](https://stackoverflow.com/questions/231767/what-is-the-function-of-the-yield-keyword)
-* The difference from simply using shuffled list is that this avoids the need to maintain a separate index counter, especially useful if there are multiple lists to be randomized
-* The `print` and `for` loop shown is only to demonstrate that items can be obtained one at a time
+* Get random items from list without repetition using [generator expressions](https://docs.python.org/3/tutorial/classes.html#generator-expressions)
+* The difference from simply using shuffled list is that this avoids the need to maintain a separate index counter and automatic exception raised if it goes out of range
 
 ```python
->>> def rand_items(ip_list):
-        rand_list = ip_list[:]
-        random.shuffle(rand_list)
-        for item in rand_list:
-            yield item
-    
 >>> nums = [1, 3, 6, -12, 1.2, 3.14]
->>> my_gen = rand_items(nums)
+>>> random.shuffle(nums)
+>>> my_gen = (n for n in nums)
 >>> print(next(my_gen))
 3.14
 >>> print(next(my_gen))
@@ -672,15 +666,13 @@ Enter prime numbers separated by comma: 3,5,7
 3
 -12
 6
-
->>> books = ['Harry Potter', 'Sherlock Holmes', 'To Kill a Mocking Bird']
->>> rand_books = rand_items(books)
->>> for book in rand_books:
-        print(book)
-    
-To Kill a Mocking Bird
-Harry Potter
-Sherlock Holmes
+>>> print(next(my_gen))
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+StopIteration
 ```
 
-* See [Python docs - random](https://docs.python.org/3/library/random.html) for more info and also new in version 3.6 - `random.choices`
+* [Python docs - random](https://docs.python.org/3/library/random.html) for more info
+  * new in version 3.6 - [random.choices](https://docs.python.org/3/library/random.html#random.choices)
+* [Python docs - next](https://docs.python.org/3/library/functions.html#next)
+* See also [yield](https://stackoverflow.com/questions/231767/what-is-the-function-of-the-yield-keyword)
