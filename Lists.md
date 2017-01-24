@@ -334,6 +334,18 @@ False
 899.232
 ```
 
+* Number of times an item is present
+
+```python
+>>> nums = [15, 99, 19, 382, 43, 19]
+>>> nums.count(99)
+1
+>>> nums.count(19)
+2
+>>> nums.count(23)
+0
+```
+
 * reverse list in place
 
 ```python
@@ -460,6 +472,7 @@ Would you like to have 'East' speciality 'momo' today?
 * [Python docs - dir](https://docs.python.org/3/library/functions.html#dir)
 * [Python docs - sort](https://docs.python.org/3/library/stdtypes.html#list.sort) and [Python docs - sorted](https://docs.python.org/3/library/functions.html#sorted)
 * [Python docs - various techniques for sorting data](https://docs.python.org/3/howto/sorting.html#sortinghowto)
+* [Python docs - reversed](https://docs.python.org/3/library/functions.html#reversed)
 * [Python docs - all, any](https://docs.python.org/3/library/functions.html#all)
 
 <br>
@@ -501,7 +514,8 @@ for idx, item in enumerate(north_dishes):
     print("{}. {}".format(idx + 1, item))
 ```
 
-* `enumerate()` returns a `Tuple` data type, more info on tuples in later chapters
+* In this case, we get a [tuple](./Sequence_Set_Dict_data_types.md#tuples) every iteration consisting of a count (default value 0) and an item from the list
+* [Python docs - enumerate](https://docs.python.org/3/library/functions.html#enumerate)
 
 ```
 $ ./list_looping_enumeration.py
@@ -511,6 +525,34 @@ My favorite North Indian dishes:
 3. Khichdi
 4. Makki roti
 5. Poha
+```
+
+* a start value can also be specified
+
+```python
+>>> north_dishes = ['Aloo tikki', 'Baati', 'Khichdi', 'Makki roti', 'Poha']
+>>> for idx, item in enumerate(north_dishes, start=1):
+        print(idx, item, sep='. ')
+    
+1. Aloo tikki
+2. Baati
+3. Khichdi
+4. Makki roti
+5. Poha
+```
+
+* use `zip()` to iterate over two or more lists simultaneously
+* [Python docs - zip](https://docs.python.org/3/library/functions.html#zip)
+
+```python
+>>> odd = [1, 3, 5]
+>>> even = [2, 4, 6]
+>>> for i, j in zip(odd, even):
+        print(i + j)
+    
+3
+7
+11
 ```
 
 <br>
