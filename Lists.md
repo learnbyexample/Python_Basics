@@ -427,43 +427,6 @@ False
 True
 ```
 
-* building a list of lists can be quite useful
-
-```python
-#!/usr/bin/python3
-
-import random
-
-north = ['aloo tikki', 'baati', 'khichdi', 'makki roti', 'poha']
-south = ['appam', 'bisibele bath', 'dosa', 'koottu', 'sevai']
-west  = ['dhokla', 'khakhra', 'modak', 'shiro', 'vada pav']
-east  = ['hando guri', 'litti', 'momo', 'rosgulla', 'shondesh']
-zones = ['North', 'South', 'West', 'East']
-
-choose_dish = [north, south, west, east]
-rand_zone = random.randrange(4)
-rand_dish = random.randrange(5)
-
-zone = zones[rand_zone]
-dish = choose_dish[rand_zone][rand_dish]
-print("Would you like to have '{}' speciality '{}' today?".format(zone, dish))
-```
-
-* Here we take advantage of the way list variables are referenced
-* A change in any of the four lists `north, south, east and west` will reflect accordingly in `choose_dish` too
-
-```
-$ ./list_of_lists.py 
-Would you like to have 'West' speciality 'vada pav' today?
-$ ./list_of_lists.py 
-Would you like to have 'South' speciality 'appam' today?
-$ ./list_of_lists.py 
-Would you like to have 'South' speciality 'dosa' today?
-$ ./list_of_lists.py 
-Would you like to have 'East' speciality 'momo' today?
-```
-
-
 **Further Reading**
 
 * [Python docs - more on lists](https://docs.python.org/3/tutorial/datastructures.html#more-on-lists)
@@ -625,6 +588,24 @@ odd_numbers  = [num for num in numbers if num % 2]
 even_numbers = [num for num in numbers if not num % 2]
 ```
 
+* zip example
+
+```python
+>>> p = [1, 3, 5]
+>>> q = [3, 214, 53]
+>>> [i+j for i,j in zip(p, q)]
+[4, 217, 58]
+>>> [i*j for i,j in zip(p, q)]
+[3, 642, 265]
+```
+
+use [generator expressions](https://docs.python.org/3/tutorial/classes.html#generator-expressions) if sequence needs to be passed onto another function
+
+```python
+>>> sum(i*j for i,j in zip(p, q))
+910
+```
+
 **Further Reading**
 
 For more examples, including nested loops, check these
@@ -650,8 +631,9 @@ Enter numbers separated by space: 1 23 5
 >>> nums
 [1, 23, 5]
 
->>> primes = [int(n) for n in input('Enter prime numbers separated by comma: ').split(',')]
+>>> ip_str = input('Enter prime numbers separated by comma: ')
 Enter prime numbers separated by comma: 3,5,7
+>>> primes = [int(n) for n in ip_str.split(',')]
 >>> primes
 [3, 5, 7]
 ```
