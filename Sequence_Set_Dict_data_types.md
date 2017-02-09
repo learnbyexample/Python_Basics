@@ -359,6 +359,23 @@ True
 False
 ```
 
+* dict made up of lists and using random module
+* any change in the individual lists will also reflect in dict
+* output of `keys()` method has to be changed to Sequence types like `list` or `tuple` to pass on to `random.choice`
+
+```python
+>>> north = ['aloo tikki', 'baati', 'khichdi', 'makki roti', 'poha']
+>>> south = ['appam', 'bisibele bath', 'dosa', 'koottu', 'sevai']
+>>> west = ['dhokla', 'khakhra', 'modak', 'shiro', 'vada pav']
+>>> east = ['hando guri', 'litti', 'momo', 'rosgulla', 'shondesh']
+>>> dishes = {'North': north, 'South': south, 'West': west, 'East': east}
+
+>>> rand_zone = random.choice(tuple(dishes.keys()))
+>>> rand_dish = random.choice(dishes[rand_zone])
+>>> print("Try the '{}' speciality '{}' today".format(rand_zone, rand_dish))
+Try the 'East' speciality 'rosgulla' today
+```
+
 **Further Reading**
 
 * [Python docs - dict](https://docs.python.org/3/library/stdtypes.html#dict)
