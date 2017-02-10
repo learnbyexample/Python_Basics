@@ -244,13 +244,9 @@ IndexError: list index out of range
 [[3, 2, 10]]
 ```
 
-* clearing list and alternate method to delete elements
+* using [del](https://docs.python.org/3/reference/simple_stmts.html#del) to delete elements
 
 ```python
->>> prime.clear()
->>> prime
-[]
-
 >>> books = ['Harry Potter', 'Sherlock Holmes', 'To Kill a Mocking Bird']
 >>> del books[1]
 >>> books
@@ -264,6 +260,15 @@ IndexError: list index out of range
 >>> del list_2D[0]
 >>> list_2D
 [[1.2, -0.2, 0, 2]]
+```
+
+* clearing list
+
+```python
+>>> prime = [2, 3, 5, 7, 11]
+>>> prime.clear()
+>>> prime
+[]
 ```
 
 * deleting elements from a list - based on value
@@ -310,7 +315,7 @@ True
 False
 ```
 
-* sorting
+* [sorting](https://docs.python.org/3/library/stdtypes.html#list.sort)
 
 ```python
 >>> a = [1, 5.3, 321, 0, 1, 2]
@@ -322,6 +327,27 @@ False
 >>> a.sort(reverse=True)
 >>> a
 [321, 5.3, 2, 1, 1, 0]
+```
+
+Sort [based on key](https://docs.python.org/3/howto/sorting.html#sortinghowto), for example based on string length
+
+```python
+>>> words = ['fuliginous', 'crusado', 'morello', 'irk', 'seam']
+>>> words.sort(key=lambda x: len(x))
+>>> words
+['irk', 'seam', 'crusado', 'morello', 'fuliginous']
+```
+
+If original list should not be changed, use [sorted](https://docs.python.org/3/library/functions.html#sorted) function
+
+```python
+>>> nums = [-1, 34, 0.2, -4, 309]
+>>> nums_desc = sorted(nums, reverse=True)
+>>> nums_desc
+[309, 34, 0.2, -1, -4]
+
+>>> sorted(nums, key=abs)
+[0.2, -1, -4, 34, 309]
 ```
 
 * `min` and `max`
@@ -368,7 +394,7 @@ False
 140684818102664
 ```
 
-* size of lists
+* [len](https://docs.python.org/3/library/functions.html#len) function to get size of lists
 
 ```python
 >>> prime
@@ -392,7 +418,7 @@ False
 330.3
 ```
 
-* `all` and `any`
+* [all](https://docs.python.org/3/library/functions.html#all) and [any](https://docs.python.org/3/library/functions.html#any) functions
 
 ```python
 >>> conditions = [True, False, True]
@@ -430,13 +456,7 @@ True
 **Further Reading**
 
 * [Python docs - more on lists](https://docs.python.org/3/tutorial/datastructures.html#more-on-lists)
-* [Python docs - del](https://docs.python.org/3/reference/simple_stmts.html#del)
-* [Python docs - len](https://docs.python.org/3/library/functions.html#len)
-* [Python docs - dir](https://docs.python.org/3/library/functions.html#dir)
-* [Python docs - sort](https://docs.python.org/3/library/stdtypes.html#list.sort) and [Python docs - sorted](https://docs.python.org/3/library/functions.html#sorted)
-* [Python docs - various techniques for sorting data](https://docs.python.org/3/howto/sorting.html#sortinghowto)
-* [Python docs - reversed](https://docs.python.org/3/library/functions.html#reversed)
-* [Python docs - all, any](https://docs.python.org/3/library/functions.html#all)
+* [Python docs - collections](https://docs.python.org/3/library/collections.html)
 
 <br>
 ### <a name="looping"></a>Looping
