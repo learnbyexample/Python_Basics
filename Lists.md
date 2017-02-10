@@ -329,13 +329,18 @@ False
 [321, 5.3, 2, 1, 1, 0]
 ```
 
-Sort [based on key](https://docs.python.org/3/howto/sorting.html#sortinghowto), for example based on string length
+Sort [based on key](https://docs.python.org/3/howto/sorting.html#sortinghowto), for example based on string length  
+[lambda expressions](https://docs.python.org/3/tutorial/controlflow.html#lambda-expressions) are helpful to pass custom single expression, say sort based on second letter
 
 ```python
 >>> words = ['fuliginous', 'crusado', 'morello', 'irk', 'seam']
->>> words.sort(key=lambda x: len(x))
+>>> words.sort(key=len)
 >>> words
 ['irk', 'seam', 'crusado', 'morello', 'fuliginous']
+
+>>> words.sort(key=lambda x: x[1])
+>>> words
+['seam', 'morello', 'irk', 'crusado', 'fuliginous']
 ```
 
 If original list should not be changed, use [sorted](https://docs.python.org/3/library/functions.html#sorted) function
