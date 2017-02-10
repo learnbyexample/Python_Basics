@@ -34,6 +34,8 @@
 >>> sentence = "Thi1s is34 a senten6ce"
 >>> sentence.translate(sentence.maketrans('', '', string.digits))
 'This is a sentence'
+>>> greeting.translate(greeting.maketrans('', '', string.punctuation))
+' Have a great day '
 ```
 
 * removing leading/trailing/both characters
@@ -120,6 +122,20 @@ True
 True
 >>> 'test' not in sentence
 True
+```
+
+* get number of times character sequence is present (non-overlapping)
+
+```python
+>>> sentence = 'This is a sample string'
+>>> sentence.count('is')
+2
+>>> sentence.count('w')
+0
+
+>>> word = 'phototonic'
+>>> word.count('oto')
+1
 ```
 
 * matching character sequence at start/end of string
