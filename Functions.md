@@ -191,6 +191,26 @@ TypeError: Can't convert 'int' object to str implicitly
 The Ultimate Answer to Life, The Universe and Everything is...42
 ```
 
+* As an alternative, use multiple arguments and change `sep` accordingly
+
+```python
+>>> items = 15
+>>> print("No. of items:", items)
+No. of items: 15
+
+>>> print("No. of items:", items, sep='')
+No. of items:15
+```
+
+* To redirect print output to [stderr](https://stackoverflow.com/questions/3385201/confused-about-stdin-stdout-and-stderr) instead of default stdout, change the `file` argument
+* See also [sys.exit()](https://docs.python.org/3/library/sys.html#sys.exit)
+
+```python
+>>> import sys
+>>> print("Error!! Not a valid input", file=sys.stderr)
+Error!! Not a valid input
+```
+
 * `str.format()` can be used to style strings and handle multiple variables more elegantly than string concatenation
 
 ```python
