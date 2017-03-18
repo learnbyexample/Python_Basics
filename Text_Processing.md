@@ -231,7 +231,7 @@ False
 | ^ | anchor, match from beginning of string |
 | $ | anchor, match end of string |
 | . | Match any character except newline character \n |
-| &#124; | OR operator for matching multiple patterns |
+| \| | OR operator for matching multiple patterns |
 | () | for grouping patterns and also extraction |
 | [] | Character class - match one character among many |
 | &#92;^ | use \ to match meta characters like ^ |
