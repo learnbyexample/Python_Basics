@@ -7,6 +7,7 @@
 The sample output shown in this chapter may be different based on your username, working directories, etc
 
 <br>
+
 ### <a name="calling-shell-commands"></a>Calling Shell commands
 
 ```python
@@ -49,6 +50,7 @@ print("Hello World")
 * [Python docs - import statement](https://docs.python.org/3/reference/simple_stmts.html#import)
 
 <br>
+
 ### <a name="calling-shell-commands-with-expansion"></a>Calling Shell commands with expansion
 
 ```python
@@ -119,6 +121,7 @@ Hello learnbyexample
 * `0` is the exit status, meaning success. It is a caveat of python interpreter which displays return value too
 
 <br>
+
 ### <a name="getting-command-output-and-redirections"></a>Getting command output and redirections
 
 ```python

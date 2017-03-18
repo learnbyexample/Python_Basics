@@ -12,6 +12,7 @@ From [wikipedia](https://en.wikipedia.org/wiki/Python_(programming_language))
 [Guido van Rossum](https://en.wikipedia.org/wiki/Guido_van_Rossum) is the author of Python programming language, and continues to oversee the Python development process
 
 <br>
+
 ### <a name="installation"></a>Installation
 
 Get Python for your OS from official website - https://www.python.org/
@@ -25,6 +26,7 @@ Get Python for your OS from official website - https://www.python.org/
 * It is assumed that you are familiar with command line. If not, check out [this basic tutorial on ryanstutorials](http://ryanstutorials.net/linuxtutorial/) and [this list of curated resources for Linux](https://github.com/learnbyexample/scripting_course/blob/master/Linux_curated_resources.md)
 
 <br>
+
 ### <a name="hello-world-example"></a>Hello World example
 
 Let's start with simple a Python program and how to run it
@@ -103,6 +105,7 @@ print("Hello World")
 * [Common syntax errors](https://opencs.uwaterloo.ca/python-from-scratch/7/7/transcript)
 
 <br>
+
 ### <a name="python-interpreter"></a>Python Interpreter
 
 * It is generally used to execute snippets of Python language as a means to learning Python or for debugging purposes
@@ -140,6 +143,7 @@ NameError: name 'abc' is not defined
 * [Python docs - Interpreter example](https://docs.python.org/3/tutorial/introduction.html#using-python-as-a-calculator)
 
 <br>
+
 ### <a name="python-standard-library"></a>Python Standard Library
 
 * [Python docs - library](https://docs.python.org/3/library/index.html)

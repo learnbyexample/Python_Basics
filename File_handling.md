@@ -6,6 +6,7 @@
 * [Inplace editing with fileinput](#inplace-editing-with-fileinput)
 
 <br>
+
 ### <a name="open-function"></a>open function
 
 * syntax: open(file, mode='r', buffering=-1, encoding=None, errors=None, newline=None, closefd=True, opener=None)
@@ -27,6 +28,7 @@
 * [Python docs - standard encodings](https://docs.python.org/3/library/codecs.html#standard-encodings)
 
 <br>
+
 ### <a name="reading-files"></a>Reading files
 
 ```python
@@ -152,6 +154,7 @@ True
 ```
 
 <br>
+
 ### <a name="writing-to-files"></a>Writing to files
 
 ```python
@@ -173,6 +176,7 @@ Yet another line
 ```
 
 <br>
+
 ### <a name="inplace-editing-with-fileinput"></a>Inplace editing with fileinput
 
 ```python

@@ -5,9 +5,11 @@
 * [Python extensions](#python-extensions)
 
 <br>
+
 [Python curated resources](https://github.com/learnbyexample/scripting_course/blob/master/Python_curated_resources.md) - online courses, books, coding practice sites, frameworks for GUI/Game/Web, cheatsheet, online help forums, etc..
 
 <br>
+
 ### <a name="standard-topics-not-covered"></a>Standard topics not covered
 
 * [Python docs - classes](https://docs.python.org/3/tutorial/classes.html)
@@ -16,6 +18,7 @@
 * [Python packaging guide](https://python-packaging-user-guide.readthedocs.org/en/latest/)
 
 <br>
+
 ### <a name="useful-links-on-coding"></a>Useful links on coding
 
 * [Python docs - FAQ](https://docs.python.org/3/faq/index.html)
@@ -26,6 +29,7 @@
 * [Performance tips](https://wiki.python.org/moin/PythonSpeed/PerformanceTips)
 
 <br>
+
 ### <a name="python-extensions"></a>Python extensions
 
 * [Cython](http://cython.org/) - optimising static compiler for both the Python programming language and the extended Cython programming language

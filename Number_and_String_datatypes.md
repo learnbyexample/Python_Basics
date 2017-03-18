@@ -8,6 +8,7 @@
 Variable data type is automatically determined by Python. They only need to be assigned some value before using it elsewhere - like print function or part of expression
 
 <br>
+
 ### <a name="numbers"></a>Numbers
 
 * Integer examples
@@ -78,6 +79,7 @@ Variable data type is automatically determined by Python. They only need to be a
 * [Python docs - keywords](https://docs.python.org/3/reference/lexical_analysis.html#keywords) - do not use these as variables
 
 <br>
+
 ### <a name="string"></a>String
 
 * strings can be declared using single or double quotes
@@ -188,6 +190,7 @@ $
 * [formatting triple quoted strings](https://stackoverflow.com/questions/3877623/in-python-can-you-have-variables-within-triple-quotes-if-so-how)
 
 <br>
+
 ### <a name="constants"></a>Constants
 
 Paraphrased from [Python docs - constants](https://docs.python.org/3/library/constants.html)
@@ -210,6 +213,7 @@ True
 ```
 
 <br>
+
 ### <a name="built-in-operators"></a>Built-in Operators
 
 * arithmetic operators

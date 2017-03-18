@@ -7,6 +7,7 @@
 * [continue and break](#continue-and-break)
 
 <br>
+
 ### <a name="condition-checking"></a>Condition checking
 
 * simple and combination of tests
@@ -88,6 +89,7 @@ Number passes condition
 * [Python docs - Truth Value Testing](https://docs.python.org/3/library/stdtypes.html#truth)
 
 <br>
+
 ### <a name="if"></a>if
 
 ```python
@@ -150,6 +152,7 @@ $ ./if_else_oneliner.py
 ```
 
 <br>
+
 ### <a name="for"></a>for
 
 ```python
@@ -175,6 +178,7 @@ $ ./for_loop.py
 ```
 
 <br>
+
 ### <a name="while"></a>while
 
 ```python
@@ -198,6 +202,7 @@ $
 ```
 
 <br>
+
 ### <a name="continue-and-break"></a>continue and break
 
 The `continue` and `break` keywords are used to change the normal flow of loops on certain conditions

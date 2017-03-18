@@ -10,6 +10,7 @@
 * [Getting random items from list](#getting-random-items-from-list)
 
 <br>
+
 ### <a name="assigning-list-variables"></a>Assigning List variables
 
 * Simple lists and retrieving list elements
@@ -57,6 +58,7 @@ IndexError: list index out of range
 * [Python docs - lists](https://docs.python.org/3/tutorial/introduction.html#lists)
 
 <br>
+
 ### <a name="slicing-and-modifying-lists"></a>Slicing and Modifying Lists
 
 * Like the `range()` function, list index has `start:stop:step` format, `stop` value being non-inclusive
@@ -98,6 +100,7 @@ IndexError: list index out of range
 ```
 
 <br>
+
 ### <a name="copying-lists"></a>Copying Lists
 
 * Variables in Python contain reference to objects
@@ -190,6 +193,7 @@ IndexError: list index out of range
 ```
 
 <br>
+
 ### <a name="list-methods-and-miscellaneous"></a>List Methods and Miscellaneous
 
 * adding elements to list
@@ -464,6 +468,7 @@ True
 * [Python docs - collections](https://docs.python.org/3/library/collections.html)
 
 <br>
+
 ### <a name="looping"></a>Looping
 
 ```python
@@ -544,6 +549,7 @@ My favorite North Indian dishes:
 ```
 
 <br>
+
 ### <a name="list-comprehension"></a>List Comprehension
 
 ```python
@@ -643,6 +649,7 @@ For more examples, including nested loops, check these
 * [Python docs - timeit](https://docs.python.org/3/library/timeit.html)
 
 <br>
+
 ### <a name="list-user-input"></a>Getting List as user input
 
 ```python
@@ -666,6 +673,7 @@ Enter prime numbers separated by comma: 3,5,7
 * Since user input is all treated as string, need to process based on agreed delimiter and required data type
 
 <br>
+
 ### <a name="getting-random-items-from-list"></a>Getting random items from list
 
 * Get a random item

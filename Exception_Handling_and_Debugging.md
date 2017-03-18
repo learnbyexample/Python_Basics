@@ -6,6 +6,7 @@
 * [Importing program](#importing-program)
 
 <br>
+
 ### <a name="exception-handling"></a>Exception Handling
 
 * We have seen plenty of errors in previous chapters when something goes wrong or some input was given erroneously
@@ -56,6 +57,7 @@ Square of entered number is: 9
 * [Python docs - pass statement](https://docs.python.org/3/reference/simple_stmts.html#grammar-token-pass_stmt)
 
 <br>
+
 ### <a name="syntax-check"></a>Syntax check
 
 * Python's command line options can be used for variety of purposes
@@ -75,6 +77,7 @@ SyntaxError: Missing parentheses in call to 'print'
     * One-liners: [#1](http://www.vurt.ru/2013/02/python-command-line-oneliners/), [#2](https://wiki.python.org/moin/Powerful%20Python%20One-Liners), [#3](http://python-oneliner.readthedocs.org/en/latest/)
 
 <br>
+
 ### <a name="pdb"></a>pdb
 
 * Invoking debugger is another use of `cmdline`
@@ -124,6 +127,7 @@ $ python3 -m pdb if_elif_else.py
 * [Python docs - Basic Logging Tutorial](https://docs.python.org/3/howto/logging.html)
 
 <br>
+
 ### <a name="importing-program"></a>Importing program
 
 * One can also `import` a program directly in Interpreter to test functions

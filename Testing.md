@@ -8,6 +8,7 @@
 
 
 <br>
+
 ### <a name="assert-statement"></a>assert statement
 
 * `assert` is primarily used for debugging purposes like catching invalid input or a condition that shouldn't occur
@@ -79,6 +80,7 @@ AssertionError: Number should be zero or positive integer
 ```
 
 <br>
+
 The above factorial function can also be written using [reduce](https://docs.python.org/3/library/functools.html#functools.reduce)
 
 ```python
@@ -117,6 +119,7 @@ ValueError: factorial() only accepts integral values
 * [Is Unit Testing worth the effort?](https://stackoverflow.com/questions/67299/is-unit-testing-worth-the-effort)
 
 <br>
+
 ### <a name="using-assert-to-test-a-program"></a>Using assert to test a program
 
 In a limited fashion, one can use `assert` to test a program - either within the program (and later skipped using the `-O` option) or as separate test program(s)
@@ -160,11 +163,13 @@ All tests passed
 ```
 
 <br>
+
 ### <a name="using-unittest-framework"></a>Using unittest framework
 
 This section requires understanding of [classes](https://docs.python.org/3/tutorial/classes.html)
 
 <br>
+
 ```python
 #!/usr/bin/python3
 
@@ -231,11 +236,13 @@ OK
 ```
 
 <br>
+
 ### <a name="using-unittest.mock-to-test-user-input-and-program-output"></a>Using unittest.mock to test user input and program output
 
 This section requires understanding of decorators, [do check out this wonderful intro](https://stackoverflow.com/questions/739654/how-to-make-a-chain-of-function-decorators-in-python/1594484#1594484)
 
 <br>
+
 A simple example to see how to capture `print` output for testing
 
 ```python
@@ -263,6 +270,7 @@ One can also use `decorators`
 ```
 
 <br>
+
 Now let's see how to emulate `input`
 
 ```python
@@ -281,6 +289,7 @@ Hello Tom
 ```
 
 <br>
+
 Combining both
 
 ```python
@@ -294,6 +303,7 @@ Combining both
 ```
 
 <br>
+
 Having seen basic input/output testing, let's apply it to main function of **palindrome**
 
 ```python
@@ -353,6 +363,7 @@ OK
 ```
 
 <br>
+
 ### <a name="other-testing-frameworks"></a>Other testing frameworks
 
 * [pytest](http://doc.pytest.org/en/latest/getting-started.html)

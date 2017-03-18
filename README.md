@@ -7,6 +7,7 @@ Introduction to Python - Syntax, working with Shell commands, Files, Text Proces
 * For more related resources, visit [scripting course](https://github.com/learnbyexample/scripting_course)
 
 <br>
+
 # <a name="chapters"></a>Chapters
 
 * [Introduction](./Introduction.md)
@@ -41,12 +42,14 @@ Introduction to Python - Syntax, working with Shell commands, Files, Text Proces
     * Standard topics not covered, Useful links on coding, Python extensions
 
 <br>
+
 # <a name="ebook"></a>ebook
 
 * Read as ebook on [gitbook](https://learnbyexample.gitbooks.io/python-basics/content/index.html)
 * Download ebook for offline reading - [link](https://www.gitbook.com/book/learnbyexample/python-basics/details)
 
 <br>
+
 # <a name="acknowledgements"></a>Acknowledgements
 
 * [automatetheboringstuff](https://automatetheboringstuff.com/) for getting me started with Python
@@ -55,5 +58,7 @@ Introduction to Python - Syntax, working with Shell commands, Files, Text Proces
 * [Weekly Coders, Hackers & All Tech related thread](https://www.reddit.com/r/india/search?q=Weekly+Coders%2C+Hackers+%26+All+Tech+related+thread+author%3Aavinassh&amp;restrict_sr=on&amp;sort=new&amp;t=all) - for suggestions and critique
 
 <br>
+
 # <a name="license"></a>License
+
 This work is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-nc-sa/4.0/)

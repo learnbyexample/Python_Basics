@@ -5,6 +5,7 @@
 * [String input](#string-input)
 
 <br>
+
 ### <a name="integer-input"></a>Integer input
 
 ```python
@@ -36,6 +37,7 @@ ValueError: invalid literal for int() with base 10: 'abc'
 ```
 
 <br>
+
 ### <a name="floating-point-input"></a>Floating point input
 
 ```python
@@ -73,6 +75,7 @@ ValueError: could not convert string to float: 'abc'
 ```
 
 <br>
+
 ### <a name="string-input"></a>String input
 
 ```python

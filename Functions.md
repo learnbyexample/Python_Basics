@@ -7,6 +7,7 @@
 * [Variable Scope](#variable-scope)
 
 <br>
+
 ### <a name="def"></a>def
 
 ```python
@@ -117,6 +118,7 @@ There are many more ways to call a function and other types of declarations, ref
 * [Python docs - Built-in Functions](https://docs.python.org/3/library/functions.html)
 
 <br>
+
 ### <a name="print-function"></a>print function
 
 * By default, `print` function adds newline character
@@ -265,6 +267,7 @@ Error!! Not a valid input
 * [Python docs - formatstrings](https://docs.python.org/3/library/string.html#formatstrings) - for more info and examples
 
 <br>
+
 ### <a name="range-function"></a>range function
 
 * By default `start=0` and `step=1`, so they can be skipped or defined as appropriate
@@ -294,6 +297,7 @@ range(0, 5)
 * [Python docs - Ranges](https://docs.python.org/3/library/stdtypes.html#typesseq-range) - for more info and examples
 
 <br>
+
 ### <a name="type-function"></a>type function
 
 Useful to check data type of a variable or value
@@ -322,6 +326,7 @@ Useful to check data type of a variable or value
 ```
 
 <br>
+
 ### <a name="variable-scope"></a>Variable Scope
 
 ```python

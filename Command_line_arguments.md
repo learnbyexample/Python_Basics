@@ -6,6 +6,7 @@
 * [Command line switches](#command-line-switches)
 
 <br>
+
 ### <a name="known-number-of-arguments"></a>Known number of arguments
 
 ```python
@@ -47,6 +48,7 @@ $ echo $?
 ```
 
 <br>
+
 ### <a name="varying-number-of-arguments"></a>Varying number of arguments
 
 ```python
@@ -109,6 +111,7 @@ if not os.path.isfile(filename):
 ```
 
 <br>
+
 ### <a name="using-program-name-in-code"></a>Using program name in code
 
 ```python
@@ -154,6 +157,7 @@ $ wc -lw if_elif_else.py
 ```
 
 <br>
+
 ### <a name="command-line-switches"></a>Command line switches
 
 ```python

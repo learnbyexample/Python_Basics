@@ -4,6 +4,7 @@
 * [Palindrome example](#palindrome-example)
 
 <br>
+
 ### <a name="style-guide"></a>Style guide
 
 Paraphrased from [Python docs - coding style](https://docs.python.org/3/tutorial/controlflow.html#intermezzo-coding-style)
@@ -27,6 +28,7 @@ Paraphrased from [Python docs - coding style](https://docs.python.org/3/tutorial
 * [The Hitchhiker’s Guide to Python](http://docs.python-guide.org/en/latest/) - handbook of best practices
 
 <br>
+
 ### <a name="palindrome-example"></a>Palindrome example
 
 ```python

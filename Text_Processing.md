@@ -8,6 +8,7 @@
 * [Further Reading on Regular Expressions](#further-reading-on-regular-expressions)
 
 <br>
+
 ### <a name="string-methods"></a>String methods
 
 * translate string characters
@@ -220,6 +221,7 @@ False
 * [python string methods tutorial](http://www.thehelloworldprogram.com/python/python-string-methods/)
 
 <br>
+
 ### <a name="regular-expressions"></a>Regular Expressions
 
 * Handy reference of regular expression elements
@@ -280,6 +282,7 @@ False
 | \g<1>, \g<2>, \g<3> etc | backreferencing matched patterns, useful to differentiate numbers and backreferencing |
 
 <br>
+
 ### <a name="pattern-matching-and-extraction"></a>Pattern matching and extraction
 
 * matching/extracting sequence of characters
@@ -362,6 +365,7 @@ True
 ```
 
 <br>
+
 ### <a name="search-and-replace"></a>Search and Replace
 
 **Syntax**
@@ -427,6 +431,7 @@ re.sub(pattern, repl, string, count=0, flags=0)
 * [lambda tutorial](https://pythonconquerstheuniverse.wordpress.com/2011/08/29/lambda_tutorial/)
 
 <br>
+
 ### <a name="compiling-regular-expressions"></a>Compiling Regular Expressions
 
 ```python
@@ -461,6 +466,7 @@ True
 ```
 
 <br>
+
 ### <a name="further-reading-on-regular-expressions"></a>Further Reading on Regular Expressions
 
 * [Python docs - re module](https://docs.python.org/3/library/re.html)

@@ -9,6 +9,7 @@ We have already seen Sequence types in previous chapters - strings, ranges and l
 We'll see some more operations on strings followed by Tuple, Set and Dict types in this chapter
 
 <br>
+
 ### <a name="strings"></a>Strings
 
 * The indexing we saw for lists can be applied to strings as well
@@ -96,6 +97,7 @@ True
 ```
 
 <br>
+
 ### <a name="tuples"></a>Tuples
 
 * Tuples can be thought of as sort of lists but immutable
@@ -212,6 +214,7 @@ Poha
 * [Python docs - tuple](https://docs.python.org/3/library/stdtypes.html#tuple)
 
 <br>
+
 ### <a name="set"></a>Set
 
 * Set is unordered collection of objects
@@ -287,6 +290,7 @@ True
 * [set tutorial](http://www.programiz.com/python-programming/set)
 
 <br>
+
 ### <a name="dictionary"></a>Dictionary
 
 * `dict` types can be thought of as unordered list of `key:value` pairs or a named list of items
