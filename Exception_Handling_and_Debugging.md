@@ -121,6 +121,7 @@ $ python3 -m pdb if_elif_else.py
 **Further Reading**
 
 * [Python docs - pdb](https://docs.python.org/3/library/pdb.html)
+* [pdb tutorial](https://github.com/spiside/pdb-tutorial)
 * [common runtime errors](http://inventwithpython.com/blog/2012/07/09/16-common-python-runtime-errors/)
 * [common beginner errors as a flowchart](http://pythonforbiologists.com/index.php/29-common-beginner-python-errors-on-one-page/)
 * [Common pitfalls](https://stackoverflow.com/questions/1011431/common-pitfalls-in-python)
