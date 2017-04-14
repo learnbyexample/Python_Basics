@@ -15,7 +15,11 @@ From [wikipedia](https://en.wikipedia.org/wiki/Python_(programming_language))
 
 ### <a name="installation"></a>Installation
 
-Get Python for your OS from official website - https://www.python.org/
+* Get Python for your OS from official website - https://www.python.org/ 
+    * Most Linux distributions come with Python by default
+* See also [this guide](https://itsfoss.com/python-setup-linux/) for more detail as well as how to set up virtual environment, how to use **pip** (NEVER use **sudo pip** unless you know what you are doing)
+
+<br>
 
 * Examples presented here is for **Unix-like systems**, Python version 3 and uses **bash** shell
 * You can also run Python code online
