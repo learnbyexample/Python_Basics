@@ -54,7 +54,7 @@ Introduction to Python - Syntax, working with Shell commands, Files, Text Proces
 
 * [automatetheboringstuff](https://automatetheboringstuff.com/) for getting me started with Python
 * [/r/learnpython/](https://www.reddit.com/r/learnpython/) - helpful forum for beginners and experienced programmers alike
-* [Devs and Hackers](http://slack.devup.in/) - helpful slack group
+* [Devs and Hackers](http://devup.in/) - helpful slack group
 * [Weekly Coders, Hackers & All Tech related thread](https://www.reddit.com/r/india/search?q=Weekly+Coders%2C+Hackers+%26+All+Tech+related+thread+author%3Aavinassh&amp;restrict_sr=on&amp;sort=new&amp;t=all) - for suggestions and critique
 
 <br>
