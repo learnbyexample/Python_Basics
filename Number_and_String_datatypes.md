@@ -135,7 +135,7 @@ Green
 ```
 
 * Use `r` prefix (stands for **raw**) if you do not want escape sequences to be interpreted
-* It is commonly used with regular expressions, see [Pattern matching and extraction](#pattern-matching-and-extraction) for examples
+* It is commonly used with regular expressions, see [Pattern matching and extraction](./Text_Processing.md#pattern-matching-and-extraction) for examples
 
 ```bash
 >>> raw_str = r'Blue\nRed\nGreen'
