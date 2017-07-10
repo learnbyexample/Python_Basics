@@ -16,19 +16,24 @@ Variable data type is automatically determined by Python. They only need to be a
 ```python
 >>> num1 = 7
 >>> num2 = 42
->>> sum = num1 + num2
->>> print(sum)
+>>> total = num1 + num2
+>>> print(total)
 49
->>> sum
+>>> total
 49
 
+# no limit to integer precision, only limited by available memory
 >>> 34 ** 32
 10170102859315411774579628461341138023025901305856
 
+# using single / gives floating point output
 >>> 9 / 5
 1.8
+
+# using double / gives only the integer portion, no rounding
 >>> 9 // 5
 1
+
 >>> 9 % 5
 4
 ```
@@ -37,6 +42,9 @@ Variable data type is automatically determined by Python. They only need to be a
 
 ```python
 >>> appx_pi = 22 / 7
+>>> appx_pi
+3.142857142857143
+
 >>> area = 42.16
 >>> appx_pi + area
 45.30285714285714
@@ -54,18 +62,27 @@ Variable data type is automatically determined by Python. They only need to be a
 >>> sci_num2 = 9.32e-1
 >>> sci_num1 + sci_num2
 398200.932
+
+>>> 2.13e21 + 5.23e22
+5.443e+22
 ```
 
+* Binary numbers are prefixed with `0b` or `0B` (i.e digit 0 followed by lower/upper case letter b)
 * Octal numbers are prefixed with `0o` or `0O` (i.e digit 0 followed by lower/upper case letter o)
 * Similarly, Hexadecimal numbers are prefixed with `0x` or `0X`
 
 ```python
+>>> bin_num = 0b101
 >>> oct_num = 0o12
 >>> hex_num = 0xF
+
+>>> bin_num
+5
 >>> oct_num
 10
 >>> hex_num
 15
+
 >>> oct_num + hex_num
 25
 ```
@@ -92,6 +109,7 @@ Variable data type is automatically determined by Python. They only need to be a
 >>> greeting = "Hello World!"
 >>> greeting
 'Hello World!'
+
 >>> weather = "It's a nice and warm day"
 >>> weather
 "It's a nice and warm day"
@@ -99,8 +117,8 @@ Variable data type is automatically determined by Python. They only need to be a
 It's a nice and warm day
 
 >>> weather = 'It\'s a nice and warm day'
->>> weather
-"It's a nice and warm day"
+>>> print(weather)
+It's a nice and warm day
 ```
 
 * Escape sequences like newline character `\n` can be used within string declaration
@@ -109,6 +127,7 @@ It's a nice and warm day
 >>> colors = 'Blue\nRed\nGreen'
 >>> colors
 'Blue\nRed\nGreen'
+
 >>> print(colors)
 Blue
 Red
@@ -116,28 +135,25 @@ Green
 ```
 
 * Use `r` prefix (stands for **raw**) if you do not want escape sequences to be interpreted
+* It is commonly used with regular expressions, see [Pattern matching and extraction](#pattern-matching-and-extraction) for examples
 
-```python
->>> raw_str = r"tr '\n' ' ' < list.txt"
->>> raw_str
-"tr '\\n' ' ' < list.txt"
+```bash
+>>> raw_str = r'Blue\nRed\nGreen'
 >>> print(raw_str)
-tr '\n' ' ' < list.txt
+Blue\nRed\nGreen
 
->>> normal_str = "tr '\n' ' ' < list.txt"
->>> print(normal_str)
-tr '
-' ' ' < list.txt
+# to see how the string is stored internally
+>>> raw_str
+'Blue\\nRed\\nGreen'
 ```
 
 * String concatenation and repetition
 
 ```python
->>> str1
-'This is a string'
->>> str2 = ' with concatenation'
+>>> str1 = 'Hello'
+>>> str2 = ' World'
 >>> print(str1 + str2)
-This is a string with concatenation
+Hello World
 
 >>> style_char = '-'
 >>> style_char * 10
@@ -171,7 +187,7 @@ And miles to go before I sleep.
 print(poem, end='')
 ```
 
-* Triple quoted strings are also serve as **docstrings** (documentation), examples in later chapters
+* Triple quoted strings also help in documentation, see [Docstrings](./Docstrings.md) chapter for examples
 
 ```
 $ ./triple_quoted_string.py 
