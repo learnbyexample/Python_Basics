@@ -1,3 +1,7 @@
+Use [![Join the chat at https://gitter.im/learnbyexample/scripting_course](https://badges.gitter.im/learnbyexample/scripting_course.svg)](https://gitter.im/learnbyexample/scripting_course) if you need help, have suggestions, etc
+
+<br>
+
 # <a name="python-basics"></a>Python Basics
 
 Introduction to Python - Syntax, working with Shell commands, Files, Text Processing, and more...
