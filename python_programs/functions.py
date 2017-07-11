@@ -10,8 +10,8 @@ greeting()
 
 # ----- function with arguments -----
 def sum_two_numbers(num1, num2):
-    sum = num1 + num2
-    print("{} + {} = {}".format(num1, num2, sum))
+    total = num1 + num2
+    print("{} + {} = {}".format(num1, num2, total))
 
 sum_two_numbers(3, 4)
 
