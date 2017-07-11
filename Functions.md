@@ -23,8 +23,8 @@ greeting()
 
 # ----- function with arguments -----
 def sum_two_numbers(num1, num2):
-    sum = num1 + num2
-    print("{} + {} = {}".format(num1, num2, sum))
+    total = num1 + num2
+    print("{} + {} = {}".format(num1, num2, total))
 
 sum_two_numbers(3, 4)
 
@@ -98,8 +98,8 @@ Style character =
 ```
 
 * Triple quoted comment describing function purpose is a usually followed guideline 
-* To avoid distraction from example code, docstrings for programs and functions won't be generally used in this material
-    * Example usage will be discussed briefly in a separate chapter
+* To avoid distraction from example code, docstrings for programs and functions won't be generally used in this tutorial
+    * See [Docstrings](./Docstrings.md) chapter for examples and discussion
 
 ```python
 def num_square(num):
@@ -159,17 +159,20 @@ print(...)
 ```python
 >>> a = 5
 >>> b = 2
+
 >>> print(a+b, a-b)
 7 3
 
 >>> print(a+b, a-b, sep=' : ')
 7 : 3
+
 >>> print(a+b, a-b, sep='\n')
 7
 3
 ```
 
-* Printing variables - requires explicit type conversion to `str` for numeric variables when used for string concatenation
+* When printing variables, the [__str__](https://docs.python.org/3/reference/datamodel.html#object.__str__) method is called which gives the string representation
+* So, explicit conversion is not needed unless concatenation is required
 
 ```python
 >>> greeting = 'Hello World'
@@ -184,18 +187,21 @@ Hello World. We are learning Python
 >>> print(greeting, '. We are learning Python', sep='')
 Hello World. We are learning Python
 
->>> print("The Ultimate Answer to Life, The Universe and Everything is..." + num)
+>>> print("She bought " + num + " apples")
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 TypeError: Can't convert 'int' object to str implicitly
 
->>> print("The Ultimate Answer to Life, The Universe and Everything is..." + str(num))
-The Ultimate Answer to Life, The Universe and Everything is...42
+>>> print("She bought " + str(num) + " apples")
+She bought 42 apples
 ```
 
 * As an alternative, use multiple arguments and change `sep` accordingly
 
 ```python
+>>> print("She bought", num, "apples")
+She bought 42 apples
+
 >>> items = 15
 >>> print("No. of items:", items)
 No. of items: 15
@@ -218,6 +224,16 @@ Error!! Not a valid input
 ```python
 >>> num1 = 42
 >>> num2 = 7
+
+>>> "{} + {} = {}".format(num1, num2, num1 + num2)
+'42 + 7 = 49'
+
+# or save formatting in a variable and use wherever needed
+>>> op_fmt = '{} + {} = {}'
+>>> op_fmt.format(num1, num2, num1 + num2)
+'42 + 7 = 49'
+
+# and of course the expression can be used inside print directly
 >>> print("{} + {} = {}".format(num1, num2, num1 + num2))
 42 + 7 = 49
 ```
@@ -239,28 +255,53 @@ Error!! Not a valid input
 >>> appx_pi = 22 / 7
 >>> appx_pi
 3.142857142857143
+
+# restricting number of digits after decimal point
+# value is rounded off
 >>> print("{0:.2f}".format(appx_pi))
 3.14
->>> print("{0:10.3f}".format(appx_pi))
-     3.143
+>>> print("{0:.3f}".format(appx_pi))
+3.143
+
+# aligning
+>>> print("{0:<10.3f} and 5.12".format(appx_pi))
+3.143      and 5.12
+>>> print("{0:>10.3f} and 5.12".format(appx_pi))
+     3.143 and 5.12
+
+# zerp filling
+>>> print("{0:08.3f}".format(appx_pi))
+0003.143
 ```
 
 * different base
 
 ```python
->>> num1
-42
->>> print("42 in binary = {:b}".format(num1))
+>>> print("42 in binary = {:b}".format(42))
 42 in binary = 101010
->>> print("42 in octal = {:o}".format(num1))
+>>> print("42 in octal = {:o}".format(42))
 42 in octal = 52
->>> print("42 in hex = {:x}".format(num1))
+>>> print("42 in hex = {:x}".format(42))
 42 in hex = 2a
 
->>> hex_str = "{:x}".format(num1)
+# add '#' for '0b'/'0o'/'0x' prefix
+>>> print("42 in binary = {:#b}".format(42))
+42 in binary = 0b101010
+
+>>> hex_str = "{:x}".format(42)
 >>> hex_str
 '2a'
->>> int(hex_str, 16)
+
+# can also use 'format' built-in function
+>>> format(42, 'x')
+'2a'
+>>> format(42, '#x')
+'0x2a'
+
+# converting string to int
+>>> int(hex_str, base=16)
+42
+>>> int('0x2a', base=16)
 42
 ```
 
@@ -275,7 +316,8 @@ Error!! Not a valid input
     * `range(start, stop)`
     * `range(start, stop, step)`
 * Note that `range` output doesn't include `stop` value - it is always upto `stop` value but not including it
-* We'll see more about `list` function and data type in later chapters
+* See [Lists](./Lists.md) chapters for discussion and examples on lists
+* [Python docs - Ranges](https://docs.python.org/3/library/stdtypes.html#typesseq-range) - for more info and examples
 
 ```python
 >>> range(5)
@@ -293,8 +335,6 @@ range(0, 5)
 >>> list(range(10, -5, -2))
 [10, 8, 6, 4, 2, 0, -2, -4]
 ```
-
-* [Python docs - Ranges](https://docs.python.org/3/library/stdtypes.html#typesseq-range) - for more info and examples
 
 <br>
 
