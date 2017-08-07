@@ -45,6 +45,7 @@ print(num_square(my_num))
     * [Python docs - Coding Style](https://docs.python.org/3/tutorial/controlflow.html#intermezzo-coding-style)
 * The default `return` value is `None`
 * [How variables are passed to functions in Python](http://robertheaton.com/2014/02/09/pythons-pass-by-object-reference-as-explained-by-philip-k-dick/)
+* `format` is covered in next topic
 
 ```
 $ ./functions.py 
@@ -225,7 +226,7 @@ Error!! Not a valid input
 >>> num1 = 42
 >>> num2 = 7
 
->>> "{} + {} = {}".format(num1, num2, num1 + num2)
+>>> '{} + {} = {}'.format(num1, num2, num1 + num2)
 '42 + 7 = 49'
 
 # or save formatting in a variable and use wherever needed
@@ -234,7 +235,7 @@ Error!! Not a valid input
 '42 + 7 = 49'
 
 # and of course the expression can be used inside print directly
->>> print("{} + {} = {}".format(num1, num2, num1 + num2))
+>>> print('{} + {} = {}'.format(num1, num2, num1 + num2))
 42 + 7 = 49
 ```
 
@@ -269,7 +270,7 @@ Error!! Not a valid input
 >>> print("{0:>10.3f} and 5.12".format(appx_pi))
      3.143 and 5.12
 
-# zerp filling
+# zero filling
 >>> print("{0:08.3f}".format(appx_pi))
 0003.143
 ```
@@ -281,10 +282,10 @@ Error!! Not a valid input
 42 in binary = 101010
 >>> print("42 in octal = {:o}".format(42))
 42 in octal = 52
->>> print("42 in hex = {:x}".format(42))
-42 in hex = 2a
+>>> print("241 in hex = {:x}".format(241))
+241 in hex = f1
 
-# add '#' for '0b'/'0o'/'0x' prefix
+# add # for 0b/0o/0x prefix
 >>> print("42 in binary = {:#b}".format(42))
 42 in binary = 0b101010
 
@@ -292,7 +293,7 @@ Error!! Not a valid input
 >>> hex_str
 '2a'
 
-# can also use 'format' built-in function
+# can also use format built-in function
 >>> format(42, 'x')
 '2a'
 >>> format(42, '#x')
