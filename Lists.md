@@ -525,8 +525,8 @@ My favorite North Indian dishes:
 ```python
 >>> north_dishes = ['Aloo tikki', 'Baati', 'Khichdi', 'Makki roti', 'Poha']
 >>> for idx, item in enumerate(north_dishes, start=1):
-        print(idx, item, sep='. ')
-    
+...     print(idx, item, sep='. ')
+... 
 1. Aloo tikki
 2. Baati
 3. Khichdi
@@ -541,8 +541,8 @@ My favorite North Indian dishes:
 >>> odd = [1, 3, 5]
 >>> even = [2, 4, 6]
 >>> for i, j in zip(odd, even):
-        print(i + j)
-    
+...     print(i + j)
+... 
 3
 7
 11
@@ -705,25 +705,25 @@ Enter prime numbers separated by comma: 3,5,7
 [68, 203, 15, 757, 580]
 ```
 
-* Get random items from list without repetition using [generator expressions](https://docs.python.org/3/tutorial/classes.html#generator-expressions)
+* Get random items from list without repetition by creating an iterable using [Python docs - iter](https://docs.python.org/3/library/functions.html#iter) function 
 * The difference from simply using shuffled list is that this avoids the need to maintain a separate index counter and automatic exception raised if it goes out of range
 
 ```python
 >>> nums = [1, 3, 6, -12, 1.2, 3.14]
 >>> random.shuffle(nums)
->>> my_gen = (n for n in nums)
->>> print(next(my_gen))
+>>> nums_iter = iter(nums)
+>>> print(next(nums_iter))
 3.14
->>> print(next(my_gen))
+>>> print(next(nums_iter))
 1.2
->>> for n in my_gen:
-        print(n)
-    
+>>> for n in nums_iter:
+...     print(n)
+... 
 1
 3
 -12
 6
->>> print(next(my_gen))
+>>> print(next(nums_iter))
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 StopIteration
