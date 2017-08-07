@@ -12,30 +12,30 @@
 ### <a name="string-methods"></a>String methods
 
 * translate string characters
-    * `maketrans()` to get translation table
+    * `str.maketrans()` to get translation table
     * `translate()` to perform the string mapping based on translation table
 * the first argument to `maketrans()` is string characters to be replaced, the second is characters to replace with and the third is characters to be mapped to `None`
 * [character translation examples](https://stackoverflow.com/questions/555705/character-translation-using-python-like-the-tr-command)
 
 ```python
 >>> greeting = '===== Have a great day ====='
->>> greeting.translate(greeting.maketrans('=','-'))
+>>> greeting.translate(str.maketrans('=', '-'))
 '----- Have a great day -----'
 
 >>> greeting = '===== Have a great day!! ====='
->>> greeting.translate(greeting.maketrans('=','-', '!'))
+>>> greeting.translate(str.maketrans('=', '-', '!'))
 '----- Have a great day -----'
 
 >>> import string
 >>> quote = 'SIMPLICITY IS THE ULTIMATE SOPHISTICATION'
->>> tr_table = quote.maketrans(string.ascii_uppercase,string.ascii_lowercase)
+>>> tr_table = str.maketrans(string.ascii_uppercase, string.ascii_lowercase)
 >>> quote.translate(tr_table)
 'simplicity is the ultimate sophistication'
 
 >>> sentence = "Thi1s is34 a senten6ce"
->>> sentence.translate(sentence.maketrans('', '', string.digits))
+>>> sentence.translate(str.maketrans('', '', string.digits))
 'This is a sentence'
->>> greeting.translate(greeting.maketrans('', '', string.punctuation))
+>>> greeting.translate(str.maketrans('', '', string.punctuation))
 ' Have a great day '
 ```
 
@@ -176,8 +176,8 @@ False
 >>> "a e i o u".split(' ', maxsplit=2) 
 ['a', 'e', 'i o u']
 
->>> line = '(1.0 2.0 3.0)'
->>> nums = [float(s) for s in line.strip('()').split()]
+>>> line = '{1.0 2.0 3.0}'
+>>> nums = [float(s) for s in line.strip('{}').split()]
 >>> nums
 [1.0, 2.0, 3.0]
 ```
@@ -191,8 +191,10 @@ False
 'This is a sample string'
 >>> '-'.join(str_list)
 'This-is-a-sample-string'
->>> '--'.join(str_list)
-'This--is--a--sample--string'
+
+>>> c = ' :: '
+>>> c.join(str_list)
+'This :: is :: a :: sample :: string'
 ```
 
 * replace characters
