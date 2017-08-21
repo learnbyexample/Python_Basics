@@ -6,7 +6,7 @@ Use [![Join the chat at https://gitter.im/learnbyexample/scripting_course](https
 
 Introduction to Python - Syntax, working with Shell commands, Files, Text Processing, and more...
 
-* Content here is for a one-day workshop for Python beginners
+* Suitable for a one/two day workshop for Python beginners
 * [Python curated resources](https://github.com/learnbyexample/scripting_course/blob/master/Python_curated_resources.md) for more complete resources list, including tutorials for beginners
 * For more related resources, visit [scripting course](https://github.com/learnbyexample/scripting_course)
 
@@ -42,6 +42,7 @@ Introduction to Python - Syntax, working with Shell commands, Files, Text Proces
     * Style guide, Palindrome example
 * [Testing](./Testing.md)
     * assert statement, Using assert to test a program, Using unittest framework, Using unittest.mock to test user input and program output, Other testing frameworks
+* [Exercises](./Exercises.md)
 * [Further Reading](./Further_Reading.md)
     * Standard topics not covered, Useful links on coding, Python extensions
 
