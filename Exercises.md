@@ -42,7 +42,7 @@ College    : PSG Tech
 >>> len_int(-42)
 3
 
-# bonus
+# bonus: handle -ve numbers and check for input type
 >>> len_int(-42)
 2
 >>> len_int('a')
@@ -86,8 +86,75 @@ True
     * 'Universe' for numbers divisable by 42
     * 'Oops' for all other numbers
     * Only one output, divisable by 42 takes precedence
+
+```python
+>>> six_by_seven(66)
+'Food'
+>>> six_by_seven(13)
+'Oops'
+>>> six_by_seven(42)
+'Universe'
+>>> six_by_seven(14)
+'Good'
+>>> six_by_seven(84)
+'Universe'
+>>> six_by_seven(235432)
+'Oops'
+```
+
+*bonus*: use a loop to print number and corresponding string for numbers 1 to 100
+
+```python
+1 Oops
+2 Oops
+3 Oops
+4 Oops
+5 Oops
+6 Food
+7 Good
+...
+41 Oops
+42 Universe
+...
+98 Good
+99 Oops
+100 Oops
+```
+
 * Print all numbers from 1 to 1000 which reads the same in reversed form in both binary and decimal format
-    * For example, `313` whose binary is `100111001`
+
+```
+$ ./dec_bin.py 
+1 1
+3 11
+5 101
+7 111
+9 1001
+33 100001
+99 1100011
+313 100111001
+585 1001001001
+717 1011001101
+```
+
+*bonus*: add octal and hexadecimal checks as well
+
+```
+$ ./dec_bin_oct.py 
+1 0b1 0o1
+3 0b11 0o3
+5 0b101 0o5
+7 0b111 0o7
+9 0b1001 0o11
+585 0b1001001001 0o1111
+
+$ ./dec_bin_oct_hex.py 
+1 0b1 0o1 0x1
+3 0b11 0o3 0x3
+5 0b101 0o5 0x5
+7 0b111 0o7 0x7
+9 0b1001 0o11 0x9
+```
 
 <br>
 
