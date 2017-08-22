@@ -12,17 +12,17 @@
 
 ## <a name="variables-and-print"></a>Variables and Print
 
-Ask user information, for ex: `name`, `department` and `college` and display them using print function
+Ask user information, for ex: `name`, `department`, `college` etc and display them using print function
 
 ```
-Name: learnbyexample
-Department: ECE
-College: PSG Tech
-```
+# Sample of how program might ask user input and display output afterwards
+$ ./usr_ip.py 
+Please provide the following details
+Enter your name: learnbyexample
+Enter your department: ECE
+Enter your college: PSG Tech
 
-Bonus: Format the labels
-
-```
+------------------------------------
 Name       : learnbyexample
 Department : ECE
 College    : PSG Tech
@@ -33,8 +33,48 @@ College    : PSG Tech
 ## <a name="functions"></a>Functions
 
 * Returns length of integer numbers
+
+```python
+>>> len_int(962306349871524124750813401378124)
+33
+>>> len_int(+42)
+2
+>>> len_int(-42)
+3
+
+# bonus
+>>> len_int(-42)
+2
+>>> len_int('a')
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<stdin>", line 3, in len_int
+TypeError: provide only integer input
+```
+
 * Returns True/False - two strings are same irrespective of lowercase/uppercase
+
+```python
+>>> str_cmp('nice', 'nice')
+True
+>>> str_cmp('Hi there', 'hi there')
+True
+>>> str_cmp('GoOd DaY', 'gOOd dAy')
+True
+>>> str_cmp('foo', 'food')
+False
+```
+
 * Returns True/False - two strings are anagrams (assume input consists of alphabets only)
+
+```python
+>>> str_anagram('god', 'Dog')
+True
+>>> str_anagram('beat', 'table')
+False
+>>> str_anagram('beat', 'abet')
+True
+```
 
 <br>
 
