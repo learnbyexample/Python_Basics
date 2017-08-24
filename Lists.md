@@ -62,7 +62,6 @@ IndexError: list index out of range
 ### <a name="slicing-and-modifying-lists"></a>Slicing and Modifying Lists
 
 * Like the `range()` function, list index has `start:stop:step` format, `stop` value being non-inclusive
-* The indexing format can be used to extract from list variable or modify itself
 * [stackoverflow - explain slice notation](https://stackoverflow.com/questions/509211/explain-pythons-slice-notation)
 
 ```python
@@ -97,6 +96,57 @@ IndexError: list index out of range
 [11, 7, 5, 3, 2]
 >>> prime[:]
 [2, 3, 5, 7, 11]
+```
+
+* when `start` and `stop` values are same
+* Useful when they are generated programmatically, see [text processing exercise](./Exercises.md#text-processing) for example
+
+```bash
+>>> nums = [1.2, -0.2, 0, 2]
+>>> nums[0:0]
+[]
+>>> nums[2:2]
+[]
+>>> nums[-1:-1]
+[]
+>>> nums[21:21]
+[]
+```
+
+* The indexing format can be used to extract from list variable or modify itself
+
+```python
+>>> nums = [1.2, -0.2, 0, 2]
+>>> nums[:2] = [1]
+>>> nums
+[1, 0, 2]
+
+>>> nums = [1.2, -0.2, 0, 2, 4, 23]
+>>> nums[:5:2] = [1, 4, 3]
+>>> nums
+[1, -0.2, 4, 2, 3, 23]
+
+>>> nums = [1, 2, 3, 23]
+>>> nums[::-1] = [1, 4, 5, 2]
+>>> nums
+[2, 5, 4, 1]
+```
+
+* helps to modify a list without changing `id`, which is useful if the variable name is referenced elsewhere (see next section)
+
+```python
+>>> id(nums)
+140598790579336
+>>> nums[:] = [1, 2, 5, 4.3]
+>>> nums
+[1, 2, 5, 4.3]
+>>> id(nums)
+140598790579336
+
+# assignment without using [:] will change id
+>>> nums = [1.2, -0.2, 0, 2]
+>>> id(nums)
+140598782943752
 ```
 
 <br>
