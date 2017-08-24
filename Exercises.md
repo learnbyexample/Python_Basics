@@ -247,16 +247,68 @@ $ ./extract_sum.py
 
 ## <a name="text-processing"></a>Text processing
 
-* Function to check if two words are same or differ by only one character. For ex: bar
- 	* would match with baz, bat, bar, car, etc
- 	* not match bark, art, bot, etc
-* Check if a word is in ascending alphabetic order or not
-* Check if a word is in either ascending or descending alphabetic order
+* Check if two words are same or differ by only one character (irrespective of case)
+    * input strings should have same length
+
+```python
+>>> is_one_char_diff('bar', 'bar')
+True
+>>> is_one_char_diff('bar', 'Baz')
+True
+>>> is_one_char_diff('Food', 'fold')
+True
+>>> is_one_char_diff('A', 'b')
+True
+
+>>> is_one_char_diff('a', '')
+False
+>>> is_one_char_diff('Bar', 'Bark')
+False
+>>> is_one_char_diff('Bar', 'art')
+False
+>>> is_one_char_diff('Food', 'fled')
+False
+>>> is_one_char_diff('ab', '')
+False
+```
+
+* Check if a word is in ascending/descending alphabetic order or not (irrespective of case)
+    * can you think of a way to do it only using built-in functions and string methods?
+
+```python
+>>> is_alpha_order('bot')
+True
+>>> is_alpha_order('arT')
+True
+>>> is_alpha_order('are')
+False
+>>> is_alpha_order('boat')
+False
+
+>>> is_alpha_order('toe')
+True
+>>> is_alpha_order('Flee')
+False
+>>> is_alpha_order('reed')
+True
+```
+
+*bonus*: Check if all words in a sentence (assume only whitespace separated input) are in ascending/descending alphabetic order (irrespective of case)
+
+**hint** use a built-in function and generator expression
+
+```bash
+>>> is_alpha_order_sentence('Toe got bit')
+True
+>>> is_alpha_order_sentence('All is well')
+False
+```
 
 <br>
 
 ## <a name="misc"></a>Misc
 
 * Play a song
-* Open college website
-
+    * **hint** use `subprocess` module
+* Open a browser along with any link, for ex: https://github.com/learnbyexample/Python_Basics
+    * **hint** use `webbrowser` module
