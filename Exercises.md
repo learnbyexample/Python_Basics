@@ -185,31 +185,63 @@ $ ./dec_bin_oct_hex.py
 # can you identify what mathematical function the last one performs?
 ```
 
-* Write a function that returns 3rd lowest number of a list (or iterable in general)
+* Write a function that returns nth lowest number of a list (or iterable in general)
+    * by default, return the lowest if second argument not specified
 
 ```python
->>> third_lowest([42, 23421341, 234.2e3, 21, 232, 12312, -2343])
+>>> nums = [42, 23421341, 234.2e3, 21, 232, 12312, -2343]
+>>> nth_lowest(nums, 3)
 42
->>> third_lowest([1, -2, 4, 2, 1, 3, 3, 5])
-2
-
->>> third_lowest('unrecognizable')
-'c'
-
->>> third_lowest([121, 782])
+>>> nth_lowest(nums, 5)
+12312
+>>> nth_lowest(nums, 15)
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
-  File "<stdin>", line 2, in third_lowest
+  File "<stdin>", line 2, in nth_lowest
 IndexError: list index out of range
+
+>>> nums = [1, -2, 4, 2, 1, 3, 3, 5]
+>>> nth_lowest(nums)
+-2
+>>> nth_lowest(nums, 4)
+3
+
+>>> nth_lowest('unrecognizable', 3)
+'c'
 ```
 
 <br>
 
 ## <a name="file"></a>File
 
-* Print sum of all numbers from a file
-	* file containing only single column and all numbers
-	* file containing arbitary string with numbers interspersed
+* Print sum of all numbers from a file containing only single column and all numbers
+
+```
+$ cat f1.txt 
+8
+53
+3.14
+84
+73e2
+100
+2937
+
+$ ./col_sum.py 
+10485.14
+```
+
+* Print sum of all numbers (assume only positive integer numbers) from a file containing arbitrary string
+
+```
+$ cat f2.txt 
+Hello123 World 35
+341 2
+Good 13day
+How are 1784 you
+
+$ ./extract_sum.py 
+2298
+```
 
 <br>
 
