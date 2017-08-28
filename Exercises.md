@@ -1,18 +1,18 @@
 # <a name="exercises"></a>Exercises
 
-* [Variables and Print](#variables-and-print)
-* [Functions](#functions)
-* [Control structures](#control-structures)
-* [List](#list)
-* [File](#file)
-* [Text processing](#text-processing)
-* [Misc](#misc)
+1) [Variables and Print](#variables-and-print)
+2) [Functions](#functions)
+3) [Control structures](#control-structures)
+4) [List](#list)
+5) [File](#file)
+6) [Text processing](#text-processing)
+7) [Misc](#misc)
 
 <br>
 
-## <a name="variables-and-print"></a>Variables and Print
+## <a name="variables-and-print"></a>1) Variables and Print
 
-Ask user information, for ex: `name`, `department`, `college` etc and display them using print function
+**Q1a)** Ask user information, for ex: `name`, `department`, `college` etc and display them using print function
 
 ```
 # Sample of how program might ask user input and display output afterwards
@@ -30,9 +30,9 @@ College    : PSG Tech
 
 <br>
 
-## <a name="functions"></a>Functions
+## <a name="functions"></a>2) Functions
 
-* Returns length of integer numbers
+**Q2a)** Returns length of integer numbers
 
 ```python
 >>> len_int(962306349871524124750813401378124)
@@ -52,7 +52,7 @@ Traceback (most recent call last):
 TypeError: provide only integer input
 ```
 
-* Returns True/False - two strings are same irrespective of lowercase/uppercase
+**Q2b)** Returns True/False - two strings are same irrespective of lowercase/uppercase
 
 ```python
 >>> str_cmp('nice', 'nice')
@@ -65,7 +65,7 @@ True
 False
 ```
 
-* Returns True/False - two strings are anagrams (assume input consists of alphabets only)
+**Q2c)** Returns True/False - two strings are anagrams (assume input consists of alphabets only)
 
 ```python
 >>> str_anagram('god', 'Dog')
@@ -78,14 +78,15 @@ True
 
 <br>
 
-## <a name="control-structures"></a>Control structures
+## <a name="control-structures"></a>3) Control structures
 
-* Write a function that returns
-    * 'Good' for numbers divisable by 7
-    * 'Food' for numbers divisable by 6
-    * 'Universe' for numbers divisable by 42
-    * 'Oops' for all other numbers
-    * Only one output, divisable by 42 takes precedence
+**Q3a)** Write a function that returns
+
+* 'Good' for numbers divisable by 7
+* 'Food' for numbers divisable by 6
+* 'Universe' for numbers divisable by 42
+* 'Oops' for all other numbers
+* Only one output, divisable by 42 takes precedence
 
 ```python
 >>> six_by_seven(66)
@@ -121,7 +122,7 @@ True
 100 Oops
 ```
 
-* Print all numbers from 1 to 1000 which reads the same in reversed form in both binary and decimal format
+**Q3b)** Print all numbers from 1 to 1000 which reads the same in reversed form in both binary and decimal format
 
 ```
 $ ./dec_bin.py 
@@ -158,9 +159,9 @@ $ ./dec_bin_oct_hex.py
 
 <br>
 
-## <a name="list"></a>List
+## <a name="list"></a>4) List
 
-* Write a function that returns product of all numbers of a list
+**Q4a)** Write a function that returns product of all numbers of a list
 
 ```python
 >>> product([1, 4, 21])
@@ -185,8 +186,7 @@ $ ./dec_bin_oct_hex.py
 # can you identify what mathematical function the last one performs?
 ```
 
-* Write a function that returns nth lowest number of a list (or iterable in general)
-    * by default, return the lowest if second argument not specified
+**Q4b)** Write a function that returns nth lowest number of a list (or iterable in general). Return the lowest if second argument not specified
 
 ```python
 >>> nums = [42, 23421341, 234.2e3, 21, 232, 12312, -2343]
@@ -212,9 +212,9 @@ IndexError: list index out of range
 
 <br>
 
-## <a name="file"></a>File
+## <a name="file"></a>5) File
 
-* Print sum of all numbers from a file containing only single column and all numbers
+**Q5a)** Print sum of all numbers from a file containing only single column and all numbers
 
 ```
 $ cat f1.txt 
@@ -230,7 +230,7 @@ $ ./col_sum.py
 10485.14
 ```
 
-* Print sum of all numbers (assume only positive integer numbers) from a file containing arbitrary string
+**Q5b)** Print sum of all numbers (assume only positive integer numbers) from a file containing arbitrary string
 
 ```
 $ cat f2.txt 
@@ -245,10 +245,9 @@ $ ./extract_sum.py
 
 <br>
 
-## <a name="text-processing"></a>Text processing
+## <a name="text-processing"></a>6) Text processing
 
-* Check if two words are same or differ by only one character (irrespective of case)
-    * input strings should have same length
+**Q6a)** Check if two words are same or differ by only one character (irrespective of case), input strings should have same length
 
 ```python
 >>> is_one_char_diff('bar', 'bar')
@@ -272,8 +271,9 @@ False
 False
 ```
 
-* Check if a word is in ascending/descending alphabetic order or not (irrespective of case)
-    * can you think of a way to do it only using built-in functions and string methods?
+**Q6b)** Check if a word is in ascending/descending alphabetic order or not (irrespective of case)
+
+Can you think of a way to do it only using built-in functions and string methods?
 
 ```python
 >>> is_alpha_order('bot')
@@ -306,9 +306,8 @@ False
 
 <br>
 
-## <a name="misc"></a>Misc
+## <a name="misc"></a>7) Misc
 
-* Play a song
-    * **hint** use `subprocess` module
-* Open a browser along with any link, for ex: https://github.com/learnbyexample/Python_Basics
-    * **hint** use `webbrowser` module
+**Q7a)** Play a song (**hint** use `subprocess` module)
+
+**Q7b)** Open a browser along with any link, for ex: https://github.com/learnbyexample/Python_Basics (**hint** use `webbrowser` module)
