@@ -206,7 +206,7 @@ IndexError: list index out of range
 >>> nth_lowest(nums)
 -2
 >>> nth_lowest(nums, 4)
-3
+2
 
 >>> nth_lowest('unrecognizable', 3)
 'c'
