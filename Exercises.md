@@ -173,8 +173,6 @@ $ ./dec_bin_oct_hex.py
 *bonus*: works on any kind of iterable
 
 ```python
->>> product(b)
-84
 >>> product((-3, 11, 2))
 -66
 >>> product({8, 300})
