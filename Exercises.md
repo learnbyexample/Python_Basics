@@ -190,6 +190,8 @@ $ ./dec_bin_oct_hex.py
 
 **Q4b)** Write a function that returns nth lowest number of a list (or iterable in general). Return the lowest if second argument not specified
 
+*Note* that if a list contains duplicates, they should be handled before determining nth lowest
+
 ```python
 >>> nums = [42, 23421341, 234.2e3, 21, 232, 12312, -2343]
 >>> nth_lowest(nums, 3)
@@ -207,9 +209,13 @@ IndexError: list index out of range
 -2
 >>> nth_lowest(nums, 4)
 3
+>>> nth_lowest(nums, 5)
+4
 
 >>> nth_lowest('unrecognizable', 3)
 'c'
+>>> nth_lowest('abracadabra', 4)
+'d'
 ```
 
 <br>
