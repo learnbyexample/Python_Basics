@@ -319,3 +319,9 @@ False
 **Q7a)** Play a song (**hint** use `subprocess` module)
 
 **Q7b)** Open a browser along with any link, for ex: https://github.com/learnbyexample/Python_Basics (**hint** use `webbrowser` module)
+
+<br>
+
+<br>
+
+For reference solutions, see [exercise_solutions](https://github.com/learnbyexample/Python_Basics/tree/master/exercise_solutions) directory
