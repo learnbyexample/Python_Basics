@@ -257,6 +257,8 @@ $ ./extract_sum.py
 
 **Q6a)** Check if two words are same or differ by only one character (irrespective of case), input strings should have same length
 
+See also [Levenshtein distance](https://en.wikipedia.org/wiki/Levenshtein_distance)
+
 ```python
 >>> is_one_char_diff('bar', 'bar')
 True
