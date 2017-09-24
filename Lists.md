@@ -301,10 +301,14 @@ IndexError: list index out of range
 * using [del](https://docs.python.org/3/reference/simple_stmts.html#del) to delete elements
 
 ```python
->>> books = ['Harry Potter', 'Sherlock Holmes', 'To Kill a Mocking Bird']
->>> del books[1]
->>> books
-['Harry Potter', 'To Kill a Mocking Bird']
+>>> nums = [1.2, -0.2, 0, 2, 4, 23]
+>>> del nums[1]
+>>> nums
+[1.2, 0, 2, 4, 23]
+# can use slicing notation as well
+>>> del nums[1:4]
+>>> nums
+[1.2, 23]
 
 >>> list_2D = [[1, 3, 2, 10], [1.2, -0.2, 0, 2]]
 >>> del list_2D[0][1]
