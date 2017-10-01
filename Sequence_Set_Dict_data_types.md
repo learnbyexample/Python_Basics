@@ -384,3 +384,4 @@ Try the 'East' speciality 'rosgulla' today
 
 * [Python docs - dict](https://docs.python.org/3/library/stdtypes.html#dict)
 * [Python docs - pprint](https://docs.python.org/3/library/pprint.html)
+* [detailed tutorial on dict](http://www.sharats.me/posts/the-python-dictionary/)
