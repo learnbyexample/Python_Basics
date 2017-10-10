@@ -5,8 +5,8 @@
 * [Set](#set)
 * [Dictionary](#dictionary)
 
-We have already seen Sequence types in previous chapters - strings, ranges and lists  
-We'll see some more operations on strings followed by Tuple, Set and Dict types in this chapter
+We have already seen Sequence types in previous chapters - strings, ranges and lists. Tuple is another sequence type  
+We'll see some more operations on strings followed by Tuple, Set and Dict in this chapter
 
 <br>
 
@@ -100,7 +100,8 @@ True
 
 ### <a name="tuples"></a>Tuples
 
-* Tuples can be thought of as sort of lists but immutable
+* Tuples are similar to lists but immutable and useful in other ways too
+* Individual elements can be both mutable/immutable
 
 ```python
 >>> north_dishes = ('Aloo tikki', 'Baati', 'Khichdi', 'Makki roti', 'Poha')
@@ -163,6 +164,15 @@ Poha
 >>> b
 5
 
+>>> c = 'foo'
+>>> a, b, c = c, a, b
+>>> a
+'foo'
+>>> b
+20
+>>> c
+5
+
 >>> def min_max(arr):
 ...     return min(arr), max(arr)
 ... 
@@ -212,6 +222,7 @@ Poha
 ```
 
 * [Python docs - tuple](https://docs.python.org/3/library/stdtypes.html#tuple)
+* [Python docs - tuple tutorial](https://docs.python.org/3/tutorial/datastructures.html#tuples-and-sequences)
 
 <br>
 
