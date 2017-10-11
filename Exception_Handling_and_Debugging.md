@@ -37,7 +37,7 @@ while True:
 print("Square of entered number is: {}".format(usr_num * usr_num))
 ```
 
-* `except` can be used for particular error (in this case `ValueError`) or without argument to handle any kind of error
+* `except` can be used for particular error (in this case `ValueError`)
 
 ```
 $ ./user_input_exception.py
@@ -51,9 +51,10 @@ Square of entered number is: 9
 
 **Further Reading**
 
-* [Python docs - errors and exception handling](https://docs.python.org/3/tutorial/errors.html)
-* [Python docs - raising exceptions](https://docs.python.org/3/tutorial/errors.html#raising-exceptions)
+* [Python docs - errors, exception handling and raising exceptions](https://docs.python.org/3/tutorial/errors.html)
 * [Python docs - built-in exceptions](https://docs.python.org/3/library/exceptions.html#bltin-exceptions)
+* [stackoverflow - exception message capturing](https://stackoverflow.com/questions/4690600/python-exception-message-capturing)
+* [stackoverflow - avoid bare exceptions](https://stackoverflow.com/questions/14797375/should-i-always-specify-an-exception-type-in-except-statements)
 * [Python docs - pass statement](https://docs.python.org/3/reference/simple_stmts.html#grammar-token-pass_stmt)
 
 <br>
