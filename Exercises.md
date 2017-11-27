@@ -314,6 +314,36 @@ True
 False
 ```
 
+**Q6c)** Find the maximum nested depth of curly braces
+
+Unbalanced or wrongly ordered braces should return `-1`
+
+Iterating over input string is one way to solve this, another is to use regular expressions
+
+```python
+>>> max_nested_braces('a*b')
+0
+>>> max_nested_braces('{a+2}*{b+c}')
+1
+>>> max_nested_braces('{{a+2}*{{b+{c*d}}+e*d}}')
+4
+>>> max_nested_braces('a*b+{}')
+1
+>>> max_nested_braces('}a+b{')
+-1
+>>> max_nested_braces('a*b{')
+-1
+```
+
+*bonus*: empty braces, i.e `{}` should return `-1`
+
+```python
+>>> max_nested_braces('a*b+{}')
+-1
+>>> max_nested_braces('a*{b+{}+c*{e*3.14}}')
+-1
+```
+
 <br>
 
 ## <a name="misc"></a>7) Misc
