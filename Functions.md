@@ -233,6 +233,8 @@ Error!! Not a valid input
 >>> op_fmt = '{} + {} = {}'
 >>> op_fmt.format(num1, num2, num1 + num2)
 '42 + 7 = 49'
+>>> op_fmt.format(num1, 29, num1 + 29)
+'42 + 29 = 71'
 
 # and of course the expression can be used inside print directly
 >>> print('{} + {} = {}'.format(num1, num2, num1 + num2))
@@ -306,7 +308,32 @@ Error!! Not a valid input
 42
 ```
 
+* similar to the `r` raw string prefix, using `f` prefix allows to represent format strings
+    * introduced in Python v3.6
+* similar to `str.format()`, the variables/expressions are specified within `{}`
+
+```python
+>>> num1 = 42
+>>> num2 = 7
+>>> f'{num1} + {num2} = {num1 + num2}'
+'42 + 7 = 49'
+>>> print(f'{num1} + {num2} = {num1 + num2}')
+42 + 7 = 49
+
+>>> appx_pi = 22 / 7
+>>> f'{appx_pi:08.3f}'
+'0003.143'
+
+>>> f'{20:x}'
+'14'
+>>> f'{20:#x}'
+'0x14'
+```
+
+**Further Reading**
+
 * [Python docs - formatstrings](https://docs.python.org/3/library/string.html#formatstrings) - for more info and examples
+* [Python docs - f-strings](https://docs.python.org/3/reference/lexical_analysis.html#f-strings) - for more examples and caveats
 
 <br>
 
