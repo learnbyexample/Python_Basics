@@ -87,6 +87,23 @@ Variable data type is automatically determined by Python. They only need to be a
 25
 ```
 
+* `_` can be used between digits for readability
+    * introduced in Python v3.6
+
+```bash
+>>> 1_000_000
+1000000
+>>> 1_00.3_352
+100.3352
+>>> 0xff_ab1
+1047217
+
+# f-strings formatting explained in a later chapter
+>>> num = 34 ** 32
+>>> print(f'{num:_}')
+10_170_102_859_315_411_774_579_628_461_341_138_023_025_901_305_856
+```
+
 **Further Reading**
 
 * [Python docs - numbers](https://docs.python.org/3/tutorial/introduction.html#numbers)
@@ -162,6 +179,11 @@ Hello World
 >>> word = 'buffalo '
 >>> print(word * 8)
 buffalo buffalo buffalo buffalo buffalo buffalo buffalo buffalo 
+
+# Python v3.6 allows variable interpolation with f-strings
+>>> msg = f'{str1} there'
+>>> msg
+'Hello there'
 ```
 
 * Triple quoted strings
@@ -201,6 +223,7 @@ $
 **Further Reading**
 
 * [Python docs - strings](https://docs.python.org/3/tutorial/introduction.html#strings)
+* [Python docs - f-strings](https://docs.python.org/3/reference/lexical_analysis.html#f-strings) - for more examples and caveats
 * [Python docs - List of Escape Sequences and more info on strings](https://docs.python.org/3/reference/lexical_analysis.html#strings)
 * [Python docs - Binary Sequence Types](https://docs.python.org/3/library/stdtypes.html#binary-sequence-types-bytes-bytearray-memoryview)
 * [formatting triple quoted strings](https://stackoverflow.com/questions/3877623/in-python-can-you-have-variables-within-triple-quotes-if-so-how)
