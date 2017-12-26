@@ -90,7 +90,7 @@ Variable data type is automatically determined by Python. They only need to be a
 * `_` can be used between digits for readability
     * introduced in Python v3.6
 
-```bash
+```python
 >>> 1_000_000
 1000000
 >>> 1_00.3_352
@@ -290,6 +290,4 @@ True
 
 * [Python docs - Numeric types](https://docs.python.org/3/library/stdtypes.html#numeric-types-int-float-complex) - complete list of operations and precedence
 * [Python docs - String methods](https://docs.python.org/3/library/stdtypes.html#string-methods)
-
-
 
