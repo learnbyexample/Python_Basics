@@ -49,10 +49,7 @@ College    : PSG Tech
 # bonus: handle -ve numbers and check for input type
 >>> len_int(-42)
 2
->>> len_int('a')
-Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-  File "<stdin>", line 3, in len_int
+# len_int('a') should give
 TypeError: provide only integer input
 ```
 
@@ -78,6 +75,44 @@ True
 False
 >>> str_anagram('beat', 'abet')
 True
+```
+
+**Q2d)** Returns corresponding integer or floating-point number (See [Number and String data types](./Number_and_String_datatypes.md) chapter for details)
+
+```python
+# number input
+>>> num(3)
+3
+>>> num(0x1f)
+31
+>>> num(3.32)
+3.32
+
+# string input
+>>> num('123')
+123
+>>> num('-78')
+-78
+>>> num(" 42  \n ")
+42
+>>> num('3.14')
+3.14
+>>> num('3.982e5')
+398200.0
+
+>>> s = '56'
+>>> num(s) + 44
+100
+```
+
+Other than integer or floating, only string data type should be accepted. Also, provide custom error message if input cannot be converted
+
+```python
+# num(['1', '2.3'])
+TypeError: provide only string input
+
+# num('foo')
+ValueError: could not convert string to int or float
 ```
 
 <br>
