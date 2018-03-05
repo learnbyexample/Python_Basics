@@ -230,49 +230,49 @@ False
 
 | Meta characters | Description |
 | ------------- | ----------- |
-| ^ | anchor, match from beginning of string |
-| $ | anchor, match end of string |
-| . | Match any character except newline character \n |
+| `^` | anchor, match from beginning of string |
+| `$` | anchor, match end of string |
+| `.` | Match any character except newline character `\n` |
 | &#124; | OR operator for matching multiple patterns |
-| () | for grouping patterns and also extraction |
-| [] | Character class - match one character among many |
-| &#92;^ | use \ to match meta characters like ^ |
+| `()` | for grouping patterns and also extraction |
+| `[]` | Character class - match one character among many |
+| `\^` | prefix `\` to match meta characters like `^` |
 
 <br>
 
 | Quantifiers | Description |
 | ------------- | ----------- |
-| * | Match zero or more times the preceding character |
-| + | Match one or more times the preceding character |
-| ? | Match zero or one times the preceding character |
-| {n} | Match exactly n times |
-| {n,} | Match at least n times |
-| {n,m} | Match at least n times but not more than m times |
+| `*` | Match zero or more times the preceding character |
+| `+` | Match one or more times the preceding character |
+| `?` | Match zero or one times the preceding character |
+| `{n}` | Match exactly n times |
+| `{n,}` | Match at least n times |
+| `{n,m}` | Match at least n times but not more than m times |
 
 <br>
 
 | Character classes | Description |
 | ------------- | ----------- |
-| [aeiou] | Match any vowel |
-| \[^aeiou] | ^ inverts selection, so this matches any consonant |
-| [a-f] | Match any of abcdef character |
-| \d | Match a digit, same as [0-9] |
-| \D | Match non-digit, same as \[^0-9] or \[^\d] |
-| \w | Match alphanumeric and underscore character, same as [a-zA-Z_] |
-| \W | Match non-alphanumeric and underscore character, same as \[^a-zA-Z_] or \[^\w] |
-| \s | Match white-space character, same as [\ \t\n\r\f\v] |
-| \S | Match non white-space character, same as \[^\s] |
-| \b | word boundary, word defined as sequence of alphanumeric characters |
-| \B | not a word boundary |
+| `[aeiou]` | Match any vowel |
+| `[^aeiou]` | `^` inverts selection, so this matches any consonant |
+| `[a-f]` | Match any of abcdef character |
+| `\d` | Match a digit, same as `[0-9]` |
+| `\D` | Match non-digit, same as `[^0-9]` or `[^\d]` |
+| `\w` | Match alphanumeric and underscore character, same as `[a-zA-Z0-9_]` |
+| `\W` | Match non-alphanumeric and underscore character, same as `[^a-zA-Z0-9_]` or `[^\w]` |
+| `\s` | Match white-space character, same as `[\ \t\n\r\f\v]` |
+| `\S` | Match non white-space character, same as `[^\s]` |
+| `\b` | word boundary, see `\w` for characters constituting a word |
+| `\B` | not a word boundary |
 
 <br>
 
 | Compilation Flags | Description |
 | ------------- | ----------- |
-| re.I | ignore case |
-| re.M | multiline mode, ^ and $ anchors work on internal lines |
-| re.S | singleline mode, . will also match \n |
-| re.V | verbose mode, for better readability and adding comments |
+| `re.I` | ignore case |
+| `re.M` | multiline mode, `^` and `$` anchors work on internal lines |
+| `re.S` | singleline mode, `.` will also match `\n` |
+| `re.V` | verbose mode, for better readability and adding comments |
 
 * [Python docs - Compilation Flags](https://docs.python.org/3/howto/regex.html#compilation-flags) - for more details and long names for flags
 
@@ -280,8 +280,8 @@ False
 
 | Variable | Description |
 | ------------- | ----------- |
-| \1, \2, \3 etc | backreferencing matched patterns |
-| \g<1>, \g<2>, \g<3> etc | backreferencing matched patterns, useful to differentiate numbers and backreferencing |
+| `\1`, `\2`, `\3` etc | backreferencing matched patterns |
+| `\g<1>`, `\g<2>`, `\g<3>` etc | backreferencing matched patterns, useful to differentiate numbers and backreferencing |
 
 <br>
 
