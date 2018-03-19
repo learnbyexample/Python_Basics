@@ -73,6 +73,8 @@ False
 True
 >>> str_anagram('beat', 'table')
 False
+>>> str_anagram('Tap', 'paT')
+True
 >>> str_anagram('beat', 'abet')
 True
 ```
@@ -121,11 +123,11 @@ ValueError: could not convert string to int or float
 
 **Q3a)** Write a function that returns
 
-* 'Good' for numbers divisable by 7
-* 'Food' for numbers divisable by 6
-* 'Universe' for numbers divisable by 42
+* 'Good' for numbers divisible by 7
+* 'Food' for numbers divisible by 6
+* 'Universe' for numbers divisible by 42
 * 'Oops' for all other numbers
-* Only one output, divisable by 42 takes precedence
+* Only one output, divisible by 42 takes precedence
 
 ```python
 >>> six_by_seven(66)
