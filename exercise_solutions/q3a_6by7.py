@@ -21,11 +21,4 @@ print('all tests passed')
 
 ## bonus
 #for num in range(1, 101):
-#    if num % 42 == 0:
-#        print(num, 'Universe')
-#    elif num % 7 == 0:
-#        print(num, 'Good')
-#    elif num % 6 == 0:
-#        print(num, 'Food')
-#    else:
-#        print(num, 'Oops')
+#    print(num, six_by_seven(num))
