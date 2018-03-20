@@ -12,6 +12,8 @@
 
 For some questions, Python program with assert statements is provided to automatically test your solution in the [exercise_files](https://github.com/learnbyexample/Python_Basics/tree/master/exercise_files) directory - for ex: [Q2a - length of integer numbers](https://github.com/learnbyexample/Python_Basics/blob/master/exercise_files/q2a_int_length.py). The directory also has sample input text files.
 
+You can also solve these exercises on [repl.it](https://repl.it/community/classrooms/52626), with an option to submit them for review.
+
 <br>
 
 ## <a name="variables-and-print"></a>1) Variables and Print
