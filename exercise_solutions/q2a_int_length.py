@@ -15,7 +15,7 @@ assert len_int(572342) == 6
 assert len_int(962306349871524124750813401378124) == 33
 
 try:
-    assert len_int('a')
+    len_int('a')
 except TypeError as e:
     assert str(e) == 'provide only integer input'
 
