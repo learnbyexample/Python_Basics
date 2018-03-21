@@ -4,7 +4,7 @@ def num(ip):
     if type(ip) in (int, float):
         return ip
     elif type(ip) != str:
-        raise TypeError('provide only string input')
+        raise TypeError('not a valid input')
 
     try:
         return int(ip)
@@ -30,13 +30,13 @@ s = '8' * 10
 assert num(s) == 8888888888
 
 try:
-    assert num('foo')
+    num('foo')
 except ValueError as e:
     assert str(e) == 'could not convert string to int or float'
 
 try:
-    assert num(['1', '2.3'])
+    num(['1', '2.3'])
 except TypeError as e:
-    assert str(e) == 'provide only string input'
+    assert str(e) == 'not a valid input'
 
 print('all tests passed')
