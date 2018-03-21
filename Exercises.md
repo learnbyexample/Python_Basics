@@ -113,7 +113,7 @@ Other than integer or floating, only string data type should be accepted. Also, 
 
 ```python
 # num(['1', '2.3'])
-TypeError: provide only string input
+TypeError: not a valid input
 
 # num('foo')
 ValueError: could not convert string to int or float
