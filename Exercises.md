@@ -391,6 +391,22 @@ Iterating over input string is one way to solve this, another is to use regular 
 
 **Q7b)** Open a browser along with any link, for ex: https://github.com/learnbyexample/Python_Basics (**hint** use `webbrowser` module)
 
+**Q7c)** Write a function that
+
+* accepts a filesystem path(default) or a url(indicated by True as second argument)
+* returns the longest word(here word is defined as one or more consecutive sequence of alphabets of either case)
+* assume that input encoding is **utf-8** and small enough to fit in memory and that there's only one distinct longest word
+
+```python
+>>> ip_path = 'poem.txt'
+>>> longest_word(ip_path)
+'Violets'
+
+>>> ip_path = 'https://www.gutenberg.org/files/60/60.txt'
+>>> longest_word(ip_path, True)
+'misunderstandings'
+```
+
 <br>
 
 <br>
