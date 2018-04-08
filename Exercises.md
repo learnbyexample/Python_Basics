@@ -257,6 +257,24 @@ IndexError: list index out of range
 'd'
 ```
 
+**Q4c)** Write a function that accepts a string input and returns slices
+
+* if input string is less than 3 characters long, return a list with input string as the only element
+* otherwise, return list with all string slices greater than 1 character long
+* order of slices should be same as shown in examples below
+
+```python
+>>> word_slices('i')
+['i']
+>>> word_slices('to')
+['to']
+
+>>> word_slices('are')
+['ar', 'are', 're']
+>>> word_slices('table')
+['ta', 'tab', 'tabl', 'table', 'ab', 'abl', 'able', 'bl', 'ble', 'le']
+```
+
 <br>
 
 ## <a name="file"></a>5) File
@@ -288,6 +306,38 @@ How are 1784 you
 
 $ ./extract_sum.py 
 2298
+```
+
+**Q5c)** Sort file contents in alphabetic order based on each line's extension
+
+* extension here is defined as the string after the last `.` in the line
+* if line doesn't have a `.`, those lines should come before lines with `.`
+* sorting should be case-insensitive
+* use rest of string as tie-breaker if there are more than one line with same extension
+* assume input file is ASCII encoded and small enough to fit in memory
+
+*bonus*: instead of printing results to stdout, change the input file itself with sorted result
+
+```bash
+$ cat f3.txt
+power.Log
+foo.123.txt
+list
+report_12.log
+baz.TXT
+hello.RB
+loop.do.rb
+Fav_books
+
+$ ./sort_by_ext.py
+Fav_books
+list
+power.Log
+report_12.log
+hello.RB
+loop.do.rb
+baz.TXT
+foo.123.txt
 ```
 
 <br>
