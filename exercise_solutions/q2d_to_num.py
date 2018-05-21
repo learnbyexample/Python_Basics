@@ -29,6 +29,9 @@ assert num(s) + 44 == 100
 s = '8' * 10
 assert num(s) == 8888888888
 
+assert type(num('42')) == int
+assert type(num('1.23')) == float
+
 try:
     num('foo')
 except ValueError as e:
