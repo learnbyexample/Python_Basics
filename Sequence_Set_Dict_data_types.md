@@ -305,6 +305,7 @@ True
 ### <a name="dictionary"></a>Dictionary
 
 * `dict` types can be thought of as unordered list of `key:value` pairs or a named list of items
+* up to Python v3.5 (and some implementations of v3.6) do not retain order of insertion of dict elements
 
 ```python
 >>> marks = {'Rahul' : 86, 'Ravi' : 92, 'Rohit' : 75}
@@ -391,8 +392,35 @@ False
 Try the 'East' speciality 'rosgulla' today
 ```
 
+* From Python v3.7 onwards, dict implementation will retain insertion order
+    * some implementations like the reference CPython implementation for v3.6 also retains the insertion order
+
+```python
+>>> marks = {'Rahul' : 86, 'Ravi' : 92, 'Rohit' : 75, 'Rajan': 79}
+>>> marks
+{'Rahul': 86, 'Ravi': 92, 'Rohit': 75, 'Rajan': 79}
+
+>>> for name, mark in marks.items():
+...     print(f'{name:5s}: {mark}')
+... 
+Rahul: 86
+Ravi : 92
+Rohit: 75
+Rajan: 79
+
+>>> del marks['Ravi']
+>>> marks
+{'Rahul': 86, 'Rohit': 75, 'Rajan': 79}
+
+>>> marks['Ranjit'] = 65
+>>> marks
+{'Rahul': 86, 'Rohit': 75, 'Rajan': 79, 'Ranjit': 65}
+```
+
 **Further Reading**
 
 * [Python docs - dict](https://docs.python.org/3/library/stdtypes.html#dict)
 * [Python docs - pprint](https://docs.python.org/3/library/pprint.html)
 * [detailed tutorial on dict](http://www.sharats.me/posts/the-python-dictionary/)
+* [Using dict to eliminate duplicates while retaining order](https://twitter.com/raymondh/status/944125570534621185)
+
