@@ -40,11 +40,10 @@ print('all tests passed')
 #def max_nested_braces(expr):
 #    count = 0
 #    while True:
-#        expr_sub = re.sub(r'\{[^{}]*\}', '', expr)
-#        if expr_sub == expr:
+#        expr, no_of_subs = re.subn(r'\{[^{}]*\}', '', expr)
+#        if no_of_subs == 0:
 #            break
 #        count += 1
-#        expr = expr_sub
 #
 #    if re.search(r'[{}]', expr):
 #        return -1
