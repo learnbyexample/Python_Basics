@@ -20,3 +20,10 @@ elif num > 0:
     print("{} is a positive number".format(num))
 else:
     print("{} is neither postive nor a negative number".format(num))
+
+# if-elif
+# any number of elif can be used
+if num < 0:
+    print("{} is a negative number".format(num))
+elif num > 0:
+    print("{} is a positive number".format(num))
