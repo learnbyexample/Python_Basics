@@ -19,7 +19,7 @@ Introduction to Python - Syntax, working with Shell commands, Files, Text Proces
 # <a name="chapters"></a>Chapters
 
 * [Introduction](./Introduction.md)
-    * Installation, Hello World example, Python Interpreter, Python Standard Library
+    * Installation, "Hello World" example, Python Interpreter, Python Standard Library
 * [Number and String data types](./Number_and_String_datatypes.md)
     * Numbers, String, Constants, Built-in Operators
 * [Functions](./Functions.md)
