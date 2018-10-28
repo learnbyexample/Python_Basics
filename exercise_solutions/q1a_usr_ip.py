@@ -1,19 +1,20 @@
 #!/usr/bin/python3
+#q1a_usr_ip.py
 
-print('Please provide the following details')
+print('Please provide the following details')      # for getting different inputs
 name = input('Enter your name: ')
 dept = input('Enter your department: ')
 colg = input('Enter your college: ')
 
 op_fmt = '{:<11}: {}'
 
-print('\n------------------------------------')
+print('\n------------------------------------')    #printing the input you provided
 print(op_fmt.format('Name', name))
 print(op_fmt.format('Department', dept))
 print(op_fmt.format('College', colg))
 
 
-####### Alternate
+####### Alternate solution of above question
 #print('Please provide the following details')
 #labels = ('Name', 'Department', 'College')
 #usr_details = [input('Enter your ' + itm + ': ') for itm in labels]
