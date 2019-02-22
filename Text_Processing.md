@@ -226,28 +226,34 @@ False
 
 ### <a name="regular-expressions"></a>Regular Expressions
 
-* Handy reference of regular expression elements
+* Handy reference of regular expression (RE) elements
 
 | Meta characters | Description |
 | ------------- | ----------- |
-| `^` | anchor, match from beginning of string |
-| `$` | anchor, match end of string |
+| `\A` | anchors matching to beginning of string |
+| `\Z` | anchors matching to end of string |
+| `^` | anchors matching to beginning of line |
+| `$` | anchors matching to end of line |
 | `.` | Match any character except newline character `\n` |
 | &#124; | OR operator for matching multiple patterns |
-| `()` | for grouping patterns and also extraction |
+| `(RE)` | capturing group |
+| `(?:RE)` | non-capturing group |
 | `[]` | Character class - match one character among many |
-| `\^` | prefix `\` to match meta characters like `^` |
+| `\^` | prefix `\` to literally match meta characters like `^` |
 
 <br>
 
-| Quantifiers | Description |
+| Greedy Quantifiers | Description |
 | ------------- | ----------- |
-| `*` | Match zero or more times the preceding character |
-| `+` | Match one or more times the preceding character |
-| `?` | Match zero or one times the preceding character |
+| `*` | Match zero or more times |
+| `+` | Match one or more times |
+| `?` | Match zero or one times |
+| `{m,n}` | Match `m` to `n` times (inclusive) |
+| `{m,}` | Match at least m times |
+| `{,n}` | Match up to `n` times (including `0` times) |
 | `{n}` | Match exactly n times |
-| `{n,}` | Match at least n times |
-| `{n,m}` | Match at least n times but not more than m times |
+
+Appending a `?` to greedy quantifiers makes them non-greedy
 
 <br>
 
@@ -255,7 +261,7 @@ False
 | ------------- | ----------- |
 | `[aeiou]` | Match any vowel |
 | `[^aeiou]` | `^` inverts selection, so this matches any consonant |
-| `[a-f]` | Match any of abcdef character |
+| `[a-f]` | `-` defines a range, so this matches any of abcdef characters |
 | `\d` | Match a digit, same as `[0-9]` |
 | `\D` | Match non-digit, same as `[^0-9]` or `[^\d]` |
 | `\w` | Match alphanumeric and underscore character, same as `[a-zA-Z0-9_]` |
@@ -267,21 +273,22 @@ False
 
 <br>
 
-| Compilation Flags | Description |
+| Flags | Description |
 | ------------- | ----------- |
-| `re.I` | ignore case |
-| `re.M` | multiline mode, `^` and `$` anchors work on internal lines |
-| `re.S` | singleline mode, `.` will also match `\n` |
-| `re.V` | verbose mode, for better readability and adding comments |
+| `re.I` | Ignore case |
+| `re.M` | Multiline mode, `^` and `$` anchors work on lines |
+| `re.S` | Singleline mode, `.` will also match `\n` |
+| `re.V` | Verbose mode, for better readability and adding comments |
 
-* [Python docs - Compilation Flags](https://docs.python.org/3/howto/regex.html#compilation-flags) - for more details and long names for flags
+See [Python docs - Compilation Flags](https://docs.python.org/3/howto/regex.html#compilation-flags) for more details and long names for flags
 
 <br>
 
 | Variable | Description |
 | ------------- | ----------- |
-| `\1`, `\2`, `\3` etc | backreferencing matched patterns |
-| `\g<1>`, `\g<2>`, `\g<3>` etc | backreferencing matched patterns, useful to differentiate numbers and backreferencing |
+| `\1`, `\2`, `\3` ... `\99` | backreferencing matched patterns |
+| `\g<1>`, `\g<2>`, `\g<3>` ... | backreferencing matched patterns, prevents ambiguity |
+| `\g<0>` | entire matched portion |
 
 <br>
 
@@ -471,14 +478,16 @@ True
 
 ### <a name="further-reading-on-regular-expressions"></a>Further Reading on Regular Expressions
 
+* [Python re(gex)?](https://github.com/learnbyexample/py_regular_expressions) - a book on regular expressions
 * [Python docs - re module](https://docs.python.org/3/library/re.html)
 * [Python docs - introductory tutorial to using regular expressions](https://docs.python.org/3/howto/regex.html)
-* [developers.google - Regular Expressions tutorial](https://developers.google.com/edu/python/regular-expressions)
-* [automatetheboringstuff - Regular Expressions](https://automatetheboringstuff.com/chapter7/)
 * [Comprehensive reference: What does this regex mean?](https://stackoverflow.com/questions/22937618/reference-what-does-this-regex-mean)
+* [rexegg](https://www.rexegg.com/) - tutorials, tricks and more
+* [regular-expressions](https://www.regular-expressions.info/) - tutorials and tools
+* [CommonRegex](https://github.com/madisonmay/CommonRegex) - collection of common regular expressions
 * Practice tools
-    * [online regex tester](https://regex101.com/#python) shows explanations, has reference guides and ability to save and share regex
-    * [regexone](http://regexone.com/) - interative tutorial
+    * [regex101](https://regex101.com/) - visual aid and online testing tool for regular expressions, select flavor as Python before use
+    * [regexone](https://regexone.com/) - interative tutorial
 	* [cheatsheet](https://www.shortcutfoo.com/app/dojos/python-regex/cheatsheet) - one can also learn it [interactively](https://www.shortcutfoo.com/app/dojos/python-regex)
     * [regexcrossword](https://regexcrossword.com/) - practice by solving crosswords, read 'How to play' section before you start
 
