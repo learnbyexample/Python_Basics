@@ -294,11 +294,13 @@ See [Python docs - Compilation Flags](https://docs.python.org/3/howto/regex.html
 
 ### <a name="pattern-matching-and-extraction"></a>Pattern matching and extraction
 
-* matching/extracting sequence of characters
-* use `re.search()` to see if a string contains a pattern or not
-* use `re.findall()` to get a list of matching patterns
-* use `re.split()` to get a list from splitting a string based on a pattern
-* their syntax given below
+To match/extract sequence of characters, use
+
+* `re.search()` to see if input string contains a pattern or not
+* `re.findall()` to get a list of all matching patterns
+* `re.split()` to get a list from splitting input string based on a pattern
+
+Their syntax is as follows:
 
 ```python
 re.search(pattern, string, flags=0)
@@ -306,71 +308,105 @@ re.findall(pattern, string, flags=0)
 re.split(pattern, string, maxsplit=0, flags=0)
 ```
 
+* As a good practice, always use **raw strings** to construct RE, unless other formats are required 
+    * this will avoid clash of backslash escaping between RE and normal quoted strings
+* examples for `re.search`
+
 ```python
->>> import re
->>> string = "This is a sample string"
+>>> sentence = 'This is a sample string'
 
->>> bool(re.search('is', string))
+# using normal string methods
+>>> 'is' in sentence
 True
-
->>> bool(re.search('this', string))
+>>> 'xyz' in sentence
 False
 
->>> bool(re.search('this', string, re.I))
+# need to load the re module before use
+>>> import re
+# check if 'sentence' contains the pattern described by RE argument
+>>> bool(re.search(r'is', sentence))
 True
-
->>> bool(re.search('T', string))
+>>> bool(re.search(r'this', sentence, flags=re.I))
 True
-
->>> bool(re.search('is a', string))
-True
-
->>> re.findall('i', string)
-['i', 'i', 'i']
+>>> bool(re.search(r'xyz', sentence))
+False
 ```
 
-* using regular expressions
-* use the `r''` format when using regular expression elements
+* examples for `re.findall`
 
 ```python
->>> string
-'This is a sample string'
+# match whole word par with optional s at start and e at end
+>>> re.findall(r'\bs?pare?\b', 'par spar apparent spare part pare')
+['par', 'spar', 'spare', 'pare']
 
->>> re.findall('is', string)
-['is', 'is']
+# numbers >= 100 with optional leading zeros
+>>> re.findall(r'\b0*[1-9]\d{2,}\b', '0501 035 154 12 26 98234')
+['0501', '154', '98234']
 
->>> re.findall('\bis', string)
-[]
+# if multiple capturing groups are used, each element of output
+# will be a tuple of strings of all the capture groups
+>>> re.findall(r'(x*):(y*)', 'xx:yyy x: x:yy :y')
+[('xx', 'yyy'), ('x', ''), ('x', 'yy'), ('', 'y')]
 
->>> re.findall(r'\bis', string)
-['is']
+# normal capture group will hinder ability to get whole match
+# non-capturing group to the rescue
+>>> re.findall(r'\b\w*(?:st|in)\b', 'cost akin more east run against')
+['cost', 'akin', 'east', 'against']
 
->>> re.findall(r'\w+', string)
-['This', 'is', 'a', 'sample', 'string']
+# useful for debugging purposes as well before applying substitution
+>>> re.findall(r't.*?a', 'that is quite a fabricated tale')
+['tha', 't is quite a', 'ted ta']
+```
 
->>> re.split(r'\s+', string)
-['This', 'is', 'a', 'sample', 'string']
+* examples for `re.split`
 
->>> re.split(r'\d+', 'Sample123string54with908numbers')
+```python
+# split based on one or more digit characters
+>>> re.split(r'\d+', 'Sample123string42with777numbers')
 ['Sample', 'string', 'with', 'numbers']
 
->>> re.split(r'(\d+)', 'Sample123string54with908numbers')
-['Sample', '123', 'string', '54', 'with', '908', 'numbers']
+# split based on digit or whitespace characters
+>>> re.split(r'[\d\s]+', '**1\f2\n3star\t7 77\r**')
+['**', 'star', '**']
+
+# to include the matching delimiter strings as well in the output
+>>> re.split(r'(\d+)', 'Sample123string42with777numbers')
+['Sample', '123', 'string', '42', 'with', '777', 'numbers']
+
+# use non-capturing group if capturing is not needed
+>>> re.split(r'hand(?:y|ful)', '123handed42handy777handful500')
+['123handed42', '777', '500']
 ```
 
 * backreferencing
 
 ```python
->>> quote = "So many books, so little time"
+# whole words that have at least one consecutive repeated character
+>>> words = ['effort', 'flee', 'facade', 'oddball', 'rat', 'tool']
 
->>> re.search(r'([a-z]{2,}).*\1', quote, re.I)
-<_sre.SRE_Match object; span=(0, 17), match='So many books, so'>
+>>> [w for w in words if re.search(r'\b\w*(\w)\1\w*\b', w)]
+['effort', 'flee', 'oddball', 'tool']
+```
 
->>> re.search(r'([a-z])\1', quote, re.I)
-<_sre.SRE_Match object; span=(9, 11), match='oo'>
+* The `re.search` function returns a `re.Match` object from which various details can be extracted
+like the matched portion of string, location of matched portion, etc
+* **Note** that output here is shown for Python version **3.7**
 
->>> re.findall(r'([a-z])\1', quote, re.I)
-['o', 't']
+```python
+>>> re.search(r'b.*d', 'abc ac adc abbbc')
+<re.Match object; span=(1, 9), match='bc ac ad'>
+# retrieving entire matched portion
+>>> re.search(r'b.*d', 'abc ac adc abbbc')[0]
+'bc ac ad'
+
+# capture group example
+>>> m = re.search(r'a(.*)d(.*a)', 'abc ac adc abbbc')
+# to get matched portion of second capture group
+>>> m[2]
+'c a'
+# to get a tuple of all the capture groups
+>>> m.groups()
+('bc ac a', 'c a')
 ```
 
 <br>
@@ -383,55 +419,61 @@ True
 re.sub(pattern, repl, string, count=0, flags=0)
 ```
 
-* simple substitutions
-* `re.sub` will not change value of variable passed to it, has to be explicity assigned
+* examples
+* **Note** that as strings are immutable, `re.sub` will not change value of variable
+passed to it, has to be explicity assigned
 
 ```python
->>> sentence = 'This is a sample string'
->>> re.sub('sample', 'test', sentence)
-'This is a test string'
+>>> ip_lines = "catapults\nconcatenate\ncat"
+>>> print(re.sub(r'^', r'* ', ip_lines, flags=re.M))
+* catapults
+* concatenate
+* cat
 
->>> sentence
-'This is a sample string'
->>> sentence = re.sub('sample', 'test', sentence)
->>> sentence
-'This is a test string'
+# replace 'par' only at start of word
+>>> re.sub(r'\bpar', r'X', 'par spar apparent spare part')
+'X spar apparent spare Xt'
 
->>> re.sub('/', '-', '25/06/2016')
-'25-06-2016'
->>> re.sub('/', '-', '25/06/2016', count=1)
-'25-06/2016'
+# same as: r'part|parrot|parent'
+>>> re.sub(r'par(en|ro)?t', r'X', 'par part parrot parent')
+'par X X X'
 
->>> greeting = '***** Have a great day *****'
->>> re.sub('\*', '=', greeting)
-'===== Have a great day ====='
+# remove first two columns where : is delimiter
+>>> re.sub(r'\A([^:]+:){2}', r'', 'foo:123:bar:baz', count=1)
+'bar:baz'
 ```
 
 * backreferencing
 
 ```python
->>> words = 'night and day'
->>> re.sub(r'(\w+)( \w+ )(\w+)', r'\3\2\1', words)
-'day and night'
+# remove any number of consecutive duplicate words separated by space
+# quantifiers can be applied to backreferences too!
+>>> re.sub(r'\b(\w+)( \1)+\b', r'\1', 'a a a walking for for a cause')
+'a walking for a cause'
 
->>> line = 'Can you spot the the mistakes? I i seem to not'
->>> re.sub(r'\b(\w+) \1\b', r'\1', line, flags=re.I)
-'Can you spot the mistakes? I seem to not'
+# add something around the matched strings
+>>> re.sub(r'\d+', r'(\g<0>0)', '52 apples and 31 mangoes')
+'(520) apples and (310) mangoes'
+
+# swap words that are separated by a comma
+>>> re.sub(r'(\w+),(\w+)', r'\2,\1', 'a,b 42,24')
+'b,a 24,42'
 ```
 
 * using functions in replace part of `re.sub()`
+* **Note** that Python version **3.7** is used here
 
 ```python
->>> import math
+>>> from math import factorial
 >>> numbers = '1 2 3 4 5'
-
 >>> def fact_num(n):
-...     return str(math.factorial(int(n.group(1))))
+...     return str(factorial(int(n[0])))
 ... 
->>> re.sub(r'(\d+)', fact_num, numbers)
+>>> re.sub(r'\d+', fact_num, numbers)
 '1 2 6 24 120'
 
->>> re.sub(r'(\d+)', lambda m: str(math.factorial(int(m.group(1)))), numbers)
+# using lambda
+>>> re.sub(r'\d+', lambda m: str(factorial(int(m[0]))), numbers)
 '1 2 6 24 120'
 ```
 
@@ -443,35 +485,28 @@ re.sub(pattern, repl, string, count=0, flags=0)
 
 ### <a name="compiling-regular-expressions"></a>Compiling Regular Expressions
 
+* Regular expressions can be compiled using `re.compile` function, which gives back a
+`re.Pattern` object
+* The top level `re` module functions are all available as methods for this object
+* Compiling a regular expression helps if the RE has to be used in multiple
+places or called upon multiple times inside a loop (speed benefit)
+* By default, Python maintains a small list of recently used RE, so the speed benefit
+doesn't apply for trivial use cases
+
 ```python
->>> swap_words = re.compile(r'(\w+)( \w+ )(\w+)')
->>> swap_words
-re.compile('(\\w+)( \\w+ )(\\w+)')
-
->>> words = 'night and day'
-
->>> swap_words.search(words).group()
-'night and day'
->>> swap_words.search(words).group(1)
-'night'
->>> swap_words.search(words).group(2)
-' and '
->>> swap_words.search(words).group(3)
-'day'
->>> swap_words.search(words).group(4)
-Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-IndexError: no such group
-
->>> bool(swap_words.search(words))
+>>> pet = re.compile(r'dog')
+>>> type(pet)
+<class 're.Pattern'>
+>>> bool(pet.search('They bought a dog'))
 True
->>> swap_words.findall(words)
-[('night', ' and ', 'day')]
+>>> bool(pet.search('A cat crossed their path'))
+False
 
->>> swap_words.sub(r'\3\2\1', words)
-'day and night'
->>> swap_words.sub(r'\3\2\1', 'yin and yang')
-'yang and yin'
+>>> remove_parentheses = re.compile(r'\([^)]*\)')
+>>> remove_parentheses.sub('', 'a+b(addition) - foo() + c%d(#modulo)')
+'a+b - foo + c%d'
+>>> remove_parentheses.sub('', 'Hi there(greeting). Nice day(a(b)')
+'Hi there. Nice day'
 ```
 
 <br>
