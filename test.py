@@ -1,2 +1,2 @@
-hi
+print('hi')
 
