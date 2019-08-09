@@ -230,10 +230,10 @@ False
 
 | Meta characters | Description |
 | ------------- | ----------- |
-| `\A` | anchors matching to beginning of string |
-| `\Z` | anchors matching to end of string |
-| `^` | anchors matching to beginning of line |
-| `$` | anchors matching to end of line |
+| `\A` | anchor to restrict matching to beginning of string |
+| `\Z` | anchor to restrict matching to end of string |
+| `^` | anchor to restrict matching to beginning of line |
+| `$` | anchor to restrict matching to end of line |
 | `.` | Match any character except newline character `\n` |
 | &#124; | OR operator for matching multiple patterns |
 | `(RE)` | capturing group |
@@ -278,7 +278,7 @@ Appending a `?` to greedy quantifiers makes them non-greedy
 | `re.I` | Ignore case |
 | `re.M` | Multiline mode, `^` and `$` anchors work on lines |
 | `re.S` | Singleline mode, `.` will also match `\n` |
-| `re.V` | Verbose mode, for better readability and adding comments |
+| `re.X` | Verbose mode, for better readability and adding comments |
 
 See [Python docs - Compilation Flags](https://docs.python.org/3/howto/regex.html#compilation-flags) for more details and long names for flags
 
@@ -290,6 +290,8 @@ See [Python docs - Compilation Flags](https://docs.python.org/3/howto/regex.html
 | `\g<1>`, `\g<2>`, `\g<3>` ... | backreferencing matched patterns, prevents ambiguity |
 | `\g<0>` | entire matched portion |
 
+`\0` and `\100` onwards are considered as octal values, hence cannot be used as backreference.
+
 <br>
 
 ### <a name="pattern-matching-and-extraction"></a>Pattern matching and extraction
@@ -297,7 +299,8 @@ See [Python docs - Compilation Flags](https://docs.python.org/3/howto/regex.html
 To match/extract sequence of characters, use
 
 * `re.search()` to see if input string contains a pattern or not
-* `re.findall()` to get a list of all matching patterns
+* `re.findall()` to get a list of all matching portions
+* `re.finditer()` to get an iterator of `re.Match` objects of all matching portions
 * `re.split()` to get a list from splitting input string based on a pattern
 
 Their syntax is as follows:
@@ -305,6 +308,7 @@ Their syntax is as follows:
 ```python
 re.search(pattern, string, flags=0)
 re.findall(pattern, string, flags=0)
+re.finditer(pattern, string, flags=0)
 re.split(pattern, string, maxsplit=0, flags=0)
 ```
 
@@ -409,6 +413,21 @@ like the matched portion of string, location of matched portion, etc
 ('bc ac a', 'c a')
 ```
 
+* examples for `re.finditer`
+
+```python
+>>> m_iter = re.finditer(r'(x*):(y*)', 'xx:yyy x: x:yy :y')
+>>> [(m[1], m[2]) for m in m_iter]
+[('xx', 'yyy'), ('x', ''), ('x', 'yy'), ('', 'y')]
+
+>>> m_iter = re.finditer(r'ab+c', 'abc ac adc abbbc')
+>>> for m in m_iter:
+...     print(m.span())
+... 
+(0, 3)
+(11, 16)
+```
+
 <br>
 
 ### <a name="search-and-replace"></a>Search and Replace
@@ -448,8 +467,8 @@ passed to it, has to be explicity assigned
 ```python
 # remove any number of consecutive duplicate words separated by space
 # quantifiers can be applied to backreferences too!
->>> re.sub(r'\b(\w+)( \1)+\b', r'\1', 'a a a walking for for a cause')
-'a walking for a cause'
+>>> re.sub(r'\b(\w+)( \1)+\b', r'\1', 'aa a a a 42 f_1 f_1 f_13.14')
+'aa a 42 f_1 f_13.14'
 
 # add something around the matched strings
 >>> re.sub(r'\d+', r'(\g<0>0)', '52 apples and 31 mangoes')
@@ -522,6 +541,7 @@ False
 * [CommonRegex](https://github.com/madisonmay/CommonRegex) - collection of common regular expressions
 * Practice tools
     * [regex101](https://regex101.com/) - visual aid and online testing tool for regular expressions, select flavor as Python before use
+    * [debuggex](https://www.debuggex.com) - railroad diagrams for regular expressions, select flavor as Python before use
     * [regexone](https://regexone.com/) - interative tutorial
 	* [cheatsheet](https://www.shortcutfoo.com/app/dojos/python-regex/cheatsheet) - one can also learn it [interactively](https://www.shortcutfoo.com/app/dojos/python-regex)
     * [regexcrossword](https://regexcrossword.com/) - practice by solving crosswords, read 'How to play' section before you start
