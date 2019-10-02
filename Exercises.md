@@ -71,7 +71,7 @@ False
 **Q2c)** Returns True/False - two strings are anagrams (assume input consists of alphabets only)
 
 ```python
->>> str_anagram('god', 'Dog')
+>>> str_anagram('listen', 'silent')
 True
 >>> str_anagram('beat', 'table')
 False
