@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-num = 45
+num=int(input("enter a number"))
 
 # only if
 if num > 25:
