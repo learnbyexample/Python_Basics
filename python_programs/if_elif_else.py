@@ -3,7 +3,7 @@
 num=int(input("enter a number"))
 
 # only if
-if num > 25:
+if num >= 25:
     print("Hurray! {} is greater than 25".format(num))
 
 # if-else
