@@ -10,6 +10,8 @@
 
 ```python
 #!/usr/bin/python3
+In 'python3' for both 'integers' and 'strings' we use 'input' only.
+Whereas in 'python2' we use 'input' for integers and 'raw_input' for strings
 
 usr_ip = input("Enter an integer number: ")
 

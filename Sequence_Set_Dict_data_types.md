@@ -6,7 +6,7 @@
 * [Dictionary](#dictionary)
 
 We have already seen Sequence types in previous chapters - strings, ranges and lists. Tuple is another sequence type  
-We'll see some more operations on strings followed by Tuple, Set and Dict in this chapter
+We'll see some more operations on strings followed by Tuple, Set and Dictionary in this chapter
 
 <br>
 
@@ -229,7 +229,7 @@ Poha
 ### <a name="set"></a>Set
 
 * Set is unordered collection of objects
-* Mutable data type
+* Mutable data type and doesn't contain any duplicate elements.
 * Typically used to maintain unique sequence, perform Set operations like intersection, union, difference, symmetric difference, etc
 
 ```python
