@@ -21,6 +21,8 @@
 ['a', 'e', 'i', 'o', 'u']
 >>> vowels[0]
 'a'
+>>> vowels[-1]
+'u'
 >>> vowels[2]
 'i'
 >>> vowels[10]
