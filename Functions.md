@@ -22,7 +22,7 @@ def greeting():
 greeting()
 
 # ----- function with arguments -----
-def sum_two_numbers(num1, num2):
+def sum_two_numbers(num1, num2): # num1 and num2 are parameters needed when calling the function sum_two_numbers
     total = num1 + num2
     print("{} + {} = {}".format(num1, num2, total))
 
@@ -33,7 +33,7 @@ def num_square(num):
     return num * num
 
 my_num = 3
-print(num_square(2))
+print(num_square(2)) # parameter does not have to be of any data type, it can also be variable as shown in the example next line
 print(num_square(my_num))
 ```
 
