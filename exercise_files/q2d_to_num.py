@@ -29,6 +29,6 @@ except ValueError as e:
 try:
     assert num(['1', '2.3'])
 except TypeError as e:
-    assert str(e) == 'provide only string input'
+    assert str(e) == 'not a valid input'
 
 print('all tests passed')
