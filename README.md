@@ -4,8 +4,14 @@ Introduction to Python - Syntax, working with Shell commands, Files, Text Proces
 
 * Suitable for a one/two day workshop for Python beginners
 * Visit [Python re(gex)?](https://github.com/learnbyexample/py_regular_expressions) repo for a book on regular expressions
-* [Python curated resources](https://github.com/learnbyexample/scripting_course/blob/master/Python_curated_resources.md) for more complete resources list, including tutorials for complete beginners to programming
+* [Python resources for everybody](https://learnbyexample.github.io/py_resources/) for a curated and searchable collection, including resources for complete beginners to programming
 * For more related resources, visit [scripting course](https://github.com/learnbyexample/scripting_course) and my programming blog https://learnbyexample.github.io
+
+---
+
+:warning: :warning: I'm no longer actively working on this repo. I'm archiving this repo for now, might come back later to update the book to newer Python version, add more content, etc.
+
+---
 
 <br>
 
@@ -48,18 +54,16 @@ Introduction to Python - Syntax, working with Shell commands, Files, Text Proces
 ## <a name="contributing"></a>Contributing
 
 * Please open an issue for typos/bugs/suggestions/etc
-    * Even for pull requests, open an issue for discussion before submitting PRs
-    * or [gitter group chat](https://gitter.im/learnbyexample/scripting_course) for discussion as well as for help/mentorship
+    * As this repo is no longer actively worked upon, **please do not submit pull requests**
 * Share the repo with friends/colleagues, on social media, etc to help reach other learners
-* In case you need to reach me, use [gitter private chat](https://gitter.im/learnbyexample)
-    * or mail me at `echo 'bGVhcm5ieWV4YW1wbGUubmV0QGdtYWlsLmNvbQo=' | base64 --decode`
+* In case you need to reach me, mail me at `echo 'bGVhcm5ieWV4YW1wbGUubmV0QGdtYWlsLmNvbQo=' | base64 --decode` or send a DM via [twitter](https://twitter.com/learn_byexample)
 
 <br>
 
 # <a name="ebook"></a>ebook
 
 * Read as ebook on [gitbook](https://learnbyexample.gitbooks.io/python-basics/content/index.html)
-* Download ebook for offline reading - [link](https://www.gitbook.com/book/learnbyexample/python-basics/details)
+* All `legacy.gitbook.com` links are now automatically redirected to `gitbook.com`, so there's no longer an option to download ebooks for offline reading
 
 <br>
 
