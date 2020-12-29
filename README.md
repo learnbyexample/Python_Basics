@@ -1,3 +1,17 @@
+<br>
+
+---
+
+:warning: :warning: I'm archiving this repo, as I don't intend to work on this repo further.
+
+I'm re-using materials in this repo for the **100 Page Python Intro** book (https://github.com/learnbyexample/100_page_python_intro).
+
+I'm also working on **Practice Python Projects** book (https://github.com/learnbyexample/practice_python_projects), which I had intended in this repo for the `mini_projects` folder.
+
+---
+
+<br> <br> <br>
+
 # <a name="python-basics"></a>Python Basics
 
 Introduction to Python - Syntax, working with Shell commands, Files, Text Processing, and more...
@@ -6,12 +20,6 @@ Introduction to Python - Syntax, working with Shell commands, Files, Text Proces
 * Visit [Python re(gex)?](https://github.com/learnbyexample/py_regular_expressions) repo for a book on regular expressions
 * [Python resources for everybody](https://learnbyexample.github.io/py_resources/) for a curated and searchable collection, including resources for complete beginners to programming
 * For more related resources, visit [scripting course](https://github.com/learnbyexample/scripting_course) and my programming blog https://learnbyexample.github.io
-
----
-
-:warning: :warning: I'm no longer actively working on this repo. I'm archiving this repo for now, might come back later to update the book to newer Python version, add more content, etc.
-
----
 
 <br>
 
